@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Industrial Floor Fan - actionaire</title>
+    <link rel="icon" href="images/icon.webp" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Industrial Floor Fan" name="description">
+    <!-- CSS Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/coloring.css" rel="stylesheet" type="text/css">
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+    <style>
+        .size-btn {
+            border: 2px solid #eee;
+            background: #fff;
+            color: #333;
+            padding: 10px 25px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .size-btn:hover,
+        .size-btn.active {
+            background: #E11D2E;
+            color: #fff;
+            border-color: #E11D2E;
+        }
+
+        .product-main-img {
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-control[readonly] {
+            background-color: #f8f9fa;
+            opacity: 1;
+            border: 1px solid #e9ecef;
+        }
+
+        .product-gallery-main {
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+
+        .product-gallery-thumbs {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+            scrollbar-width: thin;
+        }
+
+        .product-gallery-thumbs::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .product-gallery-thumbs::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+
+        .product-thumb {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+            flex-shrink: 0;
+        }
+
+        .product-thumb:hover,
+        .product-thumb.active {
+            border-color: #E11D2E;
+        }
+
+        .product-main-img {
+            transition: transform 0.5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="float-text show-on-scroll"><span><a href="#">Scroll to top</a></span></div>
+        <div class="scrollbar-v show-on-scroll"></div>
+        <div id="de-loader"></div>
+
+        <header class="transparent has-topbar sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 py-2">
+                        <div class="de-flex sm-pt10">
+                            <div class="de-flex-col">
+                                <div id="logo">
+                                    <a href="index.html">
+                                        <img class="logo-main" src="images/logo.webp" alt="">
+                                        <img class="logo-scroll" src="images/logo-black.webp" alt="">
+                                        <img class="logo-mobile" src="images/logo.webp" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="de-flex-col header-col-mid">
+                                <!-- Same Menu as Index -->
+                                <ul id="mainmenu">
+                                    <li><a class="menu-item" href="index.html">Home</a></li>
+                                    <li><a class="menu-item" href="about.html">About</a></li>
+                                    <li><a class="menu-item" href="products.html">Products</a>
+                                        <ul>
+                                            <li><a class="menu-item" href="air-circulators.html">Air Circulators</a>
+                                            </li>
+                                            <li><a class="menu-item" href="exhaust-blower.html">Exhaust Blower</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="menu-item" href="industries.html">Industries</a></li>
+                                    <li><a class="menu-item" href="resources.html">Resources</a>
+                                        <ul>
+                                            <li><a class="menu-item" href="catalogs.html">Catalogs</a></li>
+                                            <li><a class="menu-item" href="datasheets.html">Datasheets</a></li>
+                                            <li><a class="menu-item" href="certifications.html">Certifications</a></li>
+
+                                            <li><a class="menu-item" href="faq.html">FAQ</a></li>
+                                        </ul>`
+                                    </li>
+                                    <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="de-flex-col">
+                                <div class="menu_side_area d-flex align-items-center">
+                                    <a href="contact.html" class="btn-main btn-sm d-lg-none me-3">Get Quote</a>
+
+                                    <span id="menu-btn"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+
+            <section id="subheader" class="relative jarallax text-light">
+                <img src="images/background/3.jpeg" class="jarallax-img" alt="">
+                <div class="container relative z-2">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 text-center">
+                            <div class="subtitle s2 text-light wow fadeInUp mb-2">Product Detail</div>
+                            <h1>Industrial Floor Fan</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="sw-overlay"></div>
+            </section>
+
+            <section>
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-lg-6">
+                            <div class="product-gallery-main">
+                                <a id="main-image-link" class="image-popup" href="images/products/floor fan.jpg">
+                                    <img id="main-image" src="images/products/floor fan.jpg"
+                                        class="img-fluid w-100 product-main-img rounded-1" alt="Industrial Floor Fan">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="subtitle">Air Circulators</div>
+                            <h2 class="mb-3">Industrial Floor Fan</h2>
+                            <p>High velocity industrial floor fan designed for large area ventilation and cooling.
+                                Durable construction for long-lasting performance.</p>
+
+                            <h5 class="mb-3">Select Size: <span id="selected-size-display" class="id-color">24
+                                    inch</span></h5>
+                            <div class="mb-4">
+                                <button class="size-btn active" onclick="selectSize('24')">24"</button>
+                                <button class="size-btn" onclick="selectSize('30')">30"</button>
+                            </div>
+
+                            <div class="p-4 bg-grey rounded-1">
+                                <h4 class="mb-3">Quick Enquiry</h4>
+                                <form id="enquiry_form" onsubmit="event.preventDefault(); sendWhatsApp();">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="small fw-bold">Family</label>
+                                            <input type="text" id="f_family" class="form-control"
+                                                value="Air Circulators" readonly>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="small fw-bold">Category</label>
+                                            <input type="text" id="f_category" class="form-control" value="Industrial"
+                                                readonly>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="small fw-bold">Type</label>
+                                            <input type="text" id="f_type" class="form-control" value="Floor Fan"
+                                                readonly>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="small fw-bold">Selected Size</label>
+                                            <input type="text" id="f_size" class="form-control" value="24 inch"
+                                                readonly>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <label class="small fw-bold">Quantity</label>
+                                            <input type="number" id="f_qty" class="form-control" value="1" min="1"
+                                                onchange="updateMessage()">
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="small fw-bold">Message</label>
+                                            <textarea id="f_message" class="form-control" rows="3" readonly></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn-main w-100">Request Price &
+                                                Timeline</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="no-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h3>Related Products</h3>
+                            <div class="spacer-single"></div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card bg-white rounded-1 overflow-hidden p-3 border h-100">
+                                <img src="images/products/floor fan 2.jpg" class="img-fluid rounded-1 mb-3 w-100"
+                                    alt="Compact Floor Fan">
+                                <h4 class="fs-16">Compact Floor Fan</h4>
+                                <a href="floor-fan-compact.html" class="btn-main btn-sm w-100">View Details</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card bg-white rounded-1 overflow-hidden p-3 border h-100">
+                                <img src="images/products/floor fan.jpg" class="img-fluid rounded-1 mb-3 w-100"
+                                    alt="Portable Floor Fan">
+                                <h4 class="fs-16">Portable Floor Fan</h4>
+                                <a href="portable-heavy-floor-fan.html" class="btn-main btn-sm w-100">View Details</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="product-card bg-white rounded-1 overflow-hidden p-3 border h-100">
+                                <img src="images/products/man cooler.jpg" class="img-fluid rounded-1 mb-3 w-100"
+                                    alt="Man Cooler">
+                                <h4 class="fs-16">Man Cooler</h4>
+                                <a href="man-cooler.html" class="btn-main btn-sm w-100">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="section-dark text-light pt-60">
+            <div class="container">
+                <div class="row gx-5 gy-4">
+                    <div class="col-lg-4 col-sm-6"><img src="images/logo.webp" class="w-150px mb-3" alt=""></div>
+                </div>
+            </div>
+            <div class="subfooter mt-4 pt-3 pb-3 border-top border-secondary">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">© Copyright 2025 by Action Aire.</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/plugins.js"></script>
+    <script src="js/designesia.js"></script>
+    <script>
+        function selectSize(size) {
+            var buttons = document.querySelectorAll('.size-btn');
+            buttons.forEach(function (btn) {
+                if (btn.innerText.includes(size)) { btn.classList.add('active'); } else { btn.classList.remove('active'); }
+            });
+            document.getElementById('selected-size-display').innerText = size + " inch";
+            document.getElementById('f_size').value = size + " inch";
+            updateMessage();
+        }
+        function updateMessage() {
+            const size = document.getElementById('f_size').value;
+            const qty = document.getElementById('f_qty').value;
+            const type = document.getElementById('f_type').value;
+            const msg = `Hello, I want ${type}, Size: ${size}, Quantity: ${qty}. Please share price.`;
+            document.getElementById('f_message').value = msg;
+        }
+        function sendWhatsApp() {
+            updateMessage();
+            const message = document.getElementById('f_message').value;
+            window.open("https://wa.me/918527614600?text=" + encodeURIComponent(message), "_blank");
+        }
+        window.onload = function () { selectSize('24'); };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+:root {
+    --primary: #E11D2E;
+    --primary-hover: #b91523;
+    --secondary: #0D0D0D;
+    --accent: #F5F5F5;
+    --text: #111111;
+    --text-light: #FFFFFF;
+    --text-muted: #777777;
+    --bg-dark: #0D0D0D;
+    --bg-light: #FFFFFF;
+    --bg-grey: #F5F5F5;
+}
+
+body {
+    color: var(--text);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: var(--text);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.bg-color, section.bg-color, .btn-main, .btn-topbar, .bg-color-2 {
+    background-color: var(--primary) !important;
+    color: var(--text-light) !important;
+}
+
+.id-color, .id-color-2, .id-color-3, i.id-color {
+    color: var(--primary) !important;
+}
+
+.btn-main:hover, .btn-topbar:hover {
+    background-color: var(--primary-hover) !important;
+    color: var(--text-light) !important;
+}
+
+section.section-dark, footer.section-dark, .bg-dark-2, .header-light.transparent {
+    background-color: var(--secondary) !important;
+    color: var(--text-light) !important;
+}
+
+.text-light h1, .text-light h2, .text-light h3, .text-light h4, .text-light h5, .text-light h6 {
+    color: var(--text-light) !important;
+}
+
+a.btn-main, .btn-main {
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
