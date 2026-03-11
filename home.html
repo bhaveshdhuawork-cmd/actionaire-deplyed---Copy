@@ -17,7 +17,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
     <link href="css/plugins.css" rel="stylesheet" type="text/css">
     <link href="css/swiper.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css?v=2.0" rel="stylesheet" type="text/css">
+    <link href="fonts/elegant_font/html_css/style.css?v=2.0" rel="stylesheet" type="text/css">
+    <link href="fonts/et-line-font/style.css?v=2.0" rel="stylesheet" type="text/css">
     <link href="css/coloring.css" rel="stylesheet" type="text/css">
     <!-- color scheme -->
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
@@ -363,9 +365,7 @@
 
 <body>
     <div id="wrapper">
-        <div class="float-text show-on-scroll">
-            <span><a href="#">Scroll to top</a></span>
-        </div>
+
         <div class="scrollbar-v show-on-scroll"></div>
 
         <!-- page preloader begin -->
@@ -384,7 +384,7 @@
 
                             <!-- LOGO (ONLY ONE IMAGE) -->
                             <div class="aa-header__left">
-                                <a class="aa-logo" href="index.html" aria-label="Action Aire Home">
+                                <a class="aa-logo" href="home.html" aria-label="Action Aire Home">
                                     <img class="aa-logo__img" src="images/logo.webp" alt="Action Aire">
                                 </a>
                             </div>
@@ -392,7 +392,7 @@
                             <!-- DESKTOP NAV -->
                             <nav class="aa-nav d-none d-lg-flex" aria-label="Main navigation">
                                 <ul class="aa-menu">
-                                    <li><a class="aa-link" href="index.html">Home</a></li>
+                                    <li><a class="aa-link" href="home.html">Home</a></li>
                                     <li><a class="aa-link" href="about.html">About</a></li>
                                     <li><a class="aa-link" href="bldc.html">BLDC <span
                                                 class="badge-new blinking">NEW</span></a></li>
@@ -419,6 +419,7 @@
                                         </ul>
                                     </li>
 
+                                    <li><a class="aa-link" href="blog.html">Blog</a></li>
                                     <li><a class="aa-link" href="contact.html">Contact</a></li>
                                 </ul>
                             </nav>
@@ -443,7 +444,7 @@
                 <div class="aa-mobile__panel">
                     <div class="aa-mobile__top">
                         <!-- MOBILE LOGO (NOW INCLUDED) -->
-                        <a class="aa-mobile__brand" href="index.html" aria-label="Action Aire Home">
+                        <a class="aa-mobile__brand" href="home.html" aria-label="Action Aire Home">
                             <img src="images/logo.webp" alt="Action Aire">
                         </a>
 
@@ -453,7 +454,7 @@
                     </div>
 
                     <ul class="aa-mobile__menu">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="bldc.html">BLDC <span class="badge-new blinking">NEW</span></a></li>
 
@@ -483,6 +484,7 @@
                             </div>
                         </li>
 
+                        <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
 
@@ -884,7 +886,7 @@
                     <div class="swiper-wrapper">
                         <!-- Slide 1 -->
                         <div class="swiper-slide hero-ratio-section text-light">
-                            <img src="images/background/1.jpg" class="hero-bg" alt="Industrial Fan">
+                            <img src="images/background/1.webp" class="hero-bg" alt="Industrial Fan">
                             <div class="overlay-dark"></div>
                             <div class="content-wrapper container">
                                 <div class="row align-items-center">
@@ -902,7 +904,7 @@
 
                         <!-- Slide 2 -->
                         <div class="swiper-slide hero-ratio-section text-light">
-                            <img src="images/background/2.png" class="hero-bg" alt="Heavy Duty Fans">
+                            <img src="images/background/2.webp" class="hero-bg" alt="Heavy Duty Fans">
                             <div class="overlay-dark"></div>
                             <div class="content-wrapper container">
                                 <div class="row align-items-center">
@@ -920,7 +922,7 @@
 
                         <!-- Slide 3 -->
                         <div class="swiper-slide hero-ratio-section text-light">
-                            <img src="images/background/3.jpeg" class="hero-bg" alt="Exhaust Solutions">
+                            <img src="images/background/3.webp" class="hero-bg" alt="Exhaust Solutions">
                             <div class="overlay-dark"></div>
                             <div class="content-wrapper container">
                                 <div class="row align-items-center">
@@ -937,7 +939,7 @@
 
                         <!-- Slide 4 -->
                         <div class="swiper-slide hero-ratio-section text-light">
-                            <img src="images/background/4.png" class="hero-bg" alt="Custom Cooling">
+                            <img src="images/background/4.webp" class="hero-bg" alt="Custom Cooling">
                             <div class="overlay-dark"></div>
                             <div class="content-wrapper container">
                                 <div class="row align-items-center">
@@ -1038,6 +1040,10 @@
                             <a href="axial-flow.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
+                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
+                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
+                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
+                                        </div>
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
@@ -1059,6 +1065,10 @@
                             <a href="commercial-wall-fan.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
+                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
+                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
+                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
+                                        </div>
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
@@ -1079,6 +1089,10 @@
                             <a href="commercial-pedestal-fan.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
+                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
+                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
+                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
+                                        </div>
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
@@ -1099,6 +1113,10 @@
                             <a href="floor-fans.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
+                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
+                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
+                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
+                                        </div>
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
@@ -1119,6 +1137,10 @@
                             <a href="hanging-drum.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
+                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
+                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
+                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
+                                        </div>
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
@@ -1139,6 +1161,10 @@
                             <a href="heavy-duty-pedestal-fan.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
+                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
+                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
+                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
+                                        </div>
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
@@ -1159,6 +1185,10 @@
                             <a href="heavy-duty-wall-fan.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
+                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
+                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
+                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
+                                        </div>
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
@@ -1179,6 +1209,10 @@
                             <a href="man-cooler.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
+                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
+                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
+                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
+                                        </div>
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
@@ -1199,6 +1233,10 @@
                             <a href="heavy-duty-exhaust.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
+                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
+                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
+                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
+                                        </div>
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
@@ -1219,6 +1257,10 @@
                             <a href="water-shield-drum.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
+                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
+                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
+                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
+                                        </div>
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
@@ -1239,6 +1281,10 @@
                             <a href="portable-air-circulators.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
+                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
+                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
+                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
+                                        </div>
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
@@ -1254,24 +1300,7 @@
                             </a>
                         </div>
 
-                        <div class="item">
-                            <a href="weatherproof-ip55.html" class="d-block">
-                                <div class="product-display-card text-light overflow-hidden">
-                                    <div class="relative overflow-hidden">
-                                        <p
-                                            class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
-                                            View Product</p>
-                                        <img src="images/products/Weatherproof.jpg" class="img-fluid hover-scale-1-1"
-                                            alt="Weatherproof">
-                                        <div class="de-overlay-gradient-dark op-5 h-50 top-50"></div>
-                                    </div>
-                                    <div class="p-30">
-                                        <h4>Weatherproof</h4>
-                                        <p class="mb-0">Weatherproof fan option for outdoor and semi outdoor use.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+
 
                     </div>
                 </div>
@@ -1305,14 +1334,7 @@
                             </a>
                         </div>
 
-                        <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay=".2s">
-                            <a href="weatherproof-ip55.html" class="range-card">
-                                <div class="range-icon-wrap">
-                                    <i class="fa fa-shield-alt fa-2x"></i>
-                                </div>
-                                <h5 class="text-center">Waterproof Wall Fan</h5>
-                            </a>
-                        </div>
+
 
                         <div class="col-lg-2 col-md-4 col-6 wow fadeInUp" data-wow-delay=".3s">
                             <a href="water-shield-commercial-pedestal-fan.html" class="range-card">
@@ -1709,8 +1731,6 @@
 
                 </div>
             </section>
-
-
             <!-- ── JAVASCRIPT ── -->
             <script>
                 (function () {
@@ -1730,9 +1750,9 @@
 
                     /* ── Config ── */
                     const CONFIG = {
-                        folder: 'images/scroll-seq',
-                        startFrame: 10175,
-                        frameCount: 80,
+                        folder: 'images/seq-test',
+                        startFrame: 10231,
+                        frameCount: 80, // Total frames from 10231 to 10310 is 80
                         animPortion: 0.75    /* frames animate over the first 75% of scroll travel */
                     };
 
@@ -1746,7 +1766,7 @@
                     const clamp = (v, min, max) => Math.min(max, Math.max(min, v));
 
                     function frameSrc(i) {
-                        return `${CONFIG.folder}/f2n${CONFIG.startFrame + i}.png`;
+                        return `${CONFIG.folder}/f3_s${CONFIG.startFrame + i}.webp`;
                     }
 
                     /* ── Canvas sizing ── */
@@ -1762,9 +1782,9 @@
                     function getCropPreset() {
                         const isMobile = window.matchMedia('(max-width: 768px)').matches;
                         return isMobile
-                            ? { mode: 'contain', zoom: 1.05, panX: 0.50, panY: 0.35 }
-                            : { mode: 'cover', zoom: 0.80, panX: 0.05, panY: 0.04 };
-                        /* desktop: panX 0.05 = fan locked to LEFT side of canvas */
+                            ? { mode: 'contain', zoom: 0.75, panX: 0.50, panY: 0.15 }
+                            : { mode: 'contain', zoom: 0.55, panX: 0.10, panY: 0.50 };
+                        /* desktop: panX 0.15 = fan locked to LEFT side, zoom 0.65 reduces size to prevent overlap */
                     }
 
                     /* ── Draw a single frame ── */
@@ -1908,7 +1928,7 @@
                                 </div>
 
                                 <!-- Replace with factory/production image -->
-                                <img src="images/about/about.jpeg" class="img-fluid wow scaleIn"
+                                <img src="images/about/about.webp" class="img-fluid wow scaleIn"
                                     alt="Industrial Fan Manufacturing">
                             </div>
                         </div>
@@ -2224,36 +2244,77 @@
             .interactive-mfg .player:hover span {
                 border-left-color: #E11D2E !important;
             }
-        </style>
-        <section class="bg-color text-light no-top no-bottom overflow-hidden interactive-mfg">
-            <div class="container-fluid relative half-fluid">
-                <div class="container">
-                    <div class="row">
-                        <!-- Image -->
-                        <div class="col-lg-6 left-half h-100 overflow-hidden">
-                            <div class="absolute start-0 w-100 abs-middle fs-36 text-white text-center z-2">
-                                <a class="player d-block hover popup-youtube no-border rounded-1 wow scaleIn"
-                                    href="https://www.youtube.com/watch?v=uDsCSB7E3qE"><span></span></a>
-                            </div>
-                            <div class="image" data-bgimage="url(images/vidthum.png) center"></div>
-                        </div>
-                        <!-- Text -->
-                        <div class="col-lg-6 offset-lg-6 relative z-2">
-                            <div class="spacer-double"></div>
-                            <div class="ps-lg-5">
-                                <div class="subtitle wow fadeInUp mb-3">Manufacturing Excellence</div>
-                                <h2 class="wow fadeInUp">Precision Engineering for <span class="op-5">Industrial
-                                        Airflow</span></h2>
-                                <p class="wow fadeInUp">Our manufacturing facility combines advanced machinery with
-                                    decades of engineering expertise. We specialize in high-performance motor winding,
-                                    aerodynamic blade balancing, and rigorous quality testing to ensure every Action
-                                    Aire fan delivers maximum CFM with industrial-grade durability.</p>
-                                <div class="spacer-10"></div>
-                                <a class="btn-main fx-slide wow fadeInUp" href="about.html"><span>Learn More</span></a>
-                            </div>
-                            <div class="spacer-double"></div>
-                        </div>
 
+            .interactive-mfg .player {
+                animation: iconPulse 2s infinite;
+            }
+
+            @keyframes iconPulse {
+                0% {
+                    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+                }
+
+                70% {
+                    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+                }
+
+                100% {
+                    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+                }
+            }
+
+            /* Responsive Fixes for Video Section */
+            @media (max-width: 991px) {
+                .interactive-mfg .left-half {
+                    position: relative !important;
+                    min-height: 400px !important;
+                    width: 100% !important;
+                }
+                .interactive-mfg .offset-lg-6 {
+                    margin-left: 0 !important;
+                }
+                .interactive-mfg .ps-lg-5 {
+                    padding-left: 0 !important;
+                    text-align: center;
+                }
+                .interactive-mfg .spacer-double {
+                    display: none;
+                }
+            }
+            @media (max-width: 575px) {
+                .interactive-mfg .left-half {
+                    min-height: 250px !important;
+                }
+            }
+        </style>
+
+        <section class="bg-color text-light no-top no-bottom overflow-hidden interactive-mfg py-0">
+            <div class="container-fluid p-0">
+                <div class="row g-0 align-items-center">
+                    <!-- Video Column -->
+                    <div class="col-lg-6 left-half overflow-hidden position-relative" style="min-height: 600px;">
+                        <video autoplay loop muted playsinline
+                            style="object-fit: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 1;">
+                            <source src="images/manufacturing.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="overlay-dark"
+                            style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.2); z-index: 2;">
+                        </div>
+                    </div>
+                    <!-- Text Column -->
+                    <div class="col-lg-6">
+                        <div class="p-4 p-md-5 ps-lg-5">
+                            <div class="subtitle wow fadeInUp mb-3">Manufacturing Excellence</div>
+                            <h2 class="wow fadeInUp">Precision Engineering for <span class="op-5">Industrial
+                                    Airflow</span></h2>
+                            <p class="wow fadeInUp">Our manufacturing facility combines advanced machinery with
+                                decades of engineering expertise. We specialize in high-performance motor winding,
+                                aerodynamic blade balancing, and rigorous quality testing to ensure every Action
+                                Aire fan delivers maximum CFM with industrial-grade durability.</p>
+                            <div class="spacer-10"></div>
+                            <a class="btn-main fx-slide wow fadeInUp" href="about.html"><span>Learn More</span></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2273,43 +2334,47 @@
                         <div class="accordion s2 wow fadeInUp">
                             <div class="accordion-section">
                                 <div class="accordion-section-title" data-tab="#accordion-a1">
-                                    When should I schedule maintenance?
+                                    What is an industrial air circulator fan used for?
                                 </div>
                                 <div class="accordion-section-content" id="accordion-a1">
-                                    <p>It's recommended to schedule HVAC maintenance at least once a year, ideally
-                                        before the start of the heating or cooling season. Regular maintenance helps
-                                        improve efficiency, prevent breakdowns, and prolong the lifespan of your
-                                        system.</p>
+                                    <p>An industrial air circulator fan improves airflow in factories, warehouses, gyms,
+                                        and large spaces by evenly distributing air and reducing heat buildup.</p>
                                 </div>
                                 <div class="accordion-section-title" data-tab="#accordion-a2">
-                                    How often should I replace HVAC filters?
+                                    What is the difference between an industrial exhaust fan and an air circulator?
                                 </div>
                                 <div class="accordion-section-content" id="accordion-a2">
-                                    <p>HVAC filters should typically be replaced every 1 to 3 months, depending on
-                                        factors such as filter type, indoor air quality, and usage. Clogged or dirty
-                                        filters can restrict airflow and reduce system efficiency.</p>
+                                    <p>An industrial exhaust fan removes hot air, smoke, and fumes, while an air
+                                        circulator fan moves air within the space for better ventilation and cooling.
+                                    </p>
                                 </div>
                                 <div class="accordion-section-title" data-tab="#accordion-a3">
-                                    Do you use genuine parts for repairs?
+                                    How do I select the right size industrial fan?
                                 </div>
                                 <div class="accordion-section-content" id="accordion-a3">
-                                    <p>Yes, we use only high-quality, genuine parts to ensure the best performance
-                                        and longevity of your device after the repair.</p>
+                                    <p>Choose based on area size, ceiling height, required airflow (CFM or m&sup3;/hr),
+                                        mounting type (wall, pedestal, portable), and indoor or outdoor use.</p>
                                 </div>
                                 <div class="accordion-section-title" data-tab="#accordion-a4">
-                                    Is there a warranty on your repairs?
+                                    Are heavy duty industrial fans suitable for outdoor use?
                                 </div>
                                 <div class="accordion-section-content" id="accordion-a4">
-                                    <p>Absolutely. All our repairs come with a warranty to give you peace of mind.
-                                        The specific warranty duration may vary depending on the type of repair and
-                                        the device.</p>
+                                    <p>Yes, weatherproof and IP-rated industrial fans are designed for outdoor areas
+                                        exposed to dust, moisture, and harsh conditions.</p>
                                 </div>
                                 <div class="accordion-section-title" data-tab="#accordion-a5">
-                                    How do I Book a Repair for my repair?
+                                    Do you offer custom colour powder coating for industrial fans?
                                 </div>
                                 <div class="accordion-section-content" id="accordion-a5">
-                                    <p>You can Book a Repair by visiting our website or contacting our customer
-                                        service. We provide transparent pricing with no hidden fees.</p>
+                                    <p>Yes, we provide industrial-grade powder coating with custom colour options for
+                                        project-based and bulk orders.</p>
+                                </div>
+                                <div class="accordion-section-title" data-tab="#accordion-a6">
+                                    Do you export industrial fans internationally?
+                                </div>
+                                <div class="accordion-section-content" id="accordion-a6">
+                                    <p>Yes, we supply and export industrial air circulator and exhaust fans to
+                                        international markets with logistics support.</p>
                                 </div>
                             </div>
                         </div>
@@ -2334,7 +2399,7 @@
                     <div class="bloglist">
                         <div class="post-content">
                             <div class="post-image">
-                                <img alt="" src="images/news/1.jpg" class="w-100">
+                                <img alt="" src="images/news/1.webp" class="w-100">
                             </div>
                             <div class="post-text">
                                 <h4><a href="blog-single.html">Tips for Optimizing Your Air Conditioning
@@ -2350,7 +2415,7 @@
                     <div class="bloglist">
                         <div class="post-content">
                             <div class="post-image">
-                                <img alt="" src="images/news/2.png" class="w-100">
+                                <img alt="" src="images/background/1.jpg" class="w-100">
                             </div>
                             <div class="post-text">
                                 <h4><a href="blog-single.html">Harnessing Technology for Energy-Efficient AC</a>
@@ -2366,7 +2431,7 @@
                     <div class="bloglist">
                         <div class="post-content">
                             <div class="post-image">
-                                <img alt="" src="images/news/3.jpeg" class="w-100">
+                                <img alt="" src="images/news/3.webp" class="w-100">
                             </div>
                             <div class="post-text">
                                 <h4><a href="blog-single.html">The Impact of Air Conditioning on Indoor Air
@@ -2399,7 +2464,7 @@
                                     <h4 class="fs-36 mb-0 lh-1">20</h4>
                                     <span>Jun</span>
                                 </div>
-                                <img src="images/news/1.jpg" class="w-100 hover-scale-1-1 transition-all" alt="">
+                                <img src="images/news/1.webp" class="w-100 hover-scale-1-1 transition-all" alt="">
                             </div>
 
                             <div class="pt-30 relative">
@@ -2418,7 +2483,7 @@
                                     <h4 class="fs-36 mb-0 lh-1">20</h4>
                                     <span>Jun</span>
                                 </div>
-                                <img src="images/news/2.png" class="w-100 hover-scale-1-1 transition-all" alt="">
+                                <img src="images/background/1.jpg" class="w-100 hover-scale-1-1 transition-all" alt="">
                             </div>
 
                             <div class="pt-30 relative">
@@ -2436,7 +2501,7 @@
                                     <h4 class="fs-36 mb-0 lh-1">20</h4>
                                     <span>Jun</span>
                                 </div>
-                                <img src="images/news/3.jpeg" class="w-100 hover-scale-1-1 transition-all" alt="">
+                                <img src="images/news/3.webp" class="w-100 hover-scale-1-1 transition-all" alt="">
                             </div>
 
                             <div class="pt-30 relative">
@@ -2455,7 +2520,7 @@
                                     <h4 class="fs-36 mb-0 lh-1">20</h4>
                                     <span>Jun</span>
                                 </div>
-                                <img src="images/news/4.jpg" class="w-100 hover-scale-1-1 transition-all" alt="">
+                                <img src="images/news/4.webp" class="w-100 hover-scale-1-1 transition-all" alt="">
                             </div>
 
                             <div class="pt-30 relative">
@@ -2480,59 +2545,237 @@
                     </div>
                 </div>
 
-                <!-- Clients Logos -->
-                <div class="row align-items-center justify-content-center text-center g-4">
+                <!-- Clients Logos Marquee -->
+                <style>
+                    .client-showcase {
+                        overflow: hidden;
+                        width: 100%;
+                        padding: 10px 0;
+                        position: relative;
+                    }
 
-                    <div class="col-lg-1 col-md-2 col-4">
-                        <img src="images/clients/1.webp" class="img-fluid client-logo hover-scale-1-2 transition-all"
-                            alt="Escorts" title="Escorts">
+                    .client-track {
+                        display: flex;
+                        gap: 40px;
+                        width: max-content;
+                        align-items: center;
+                        animation: marqueeClients 40s linear infinite;
+                    }
+
+                    .client-track:hover {
+                        animation-play-state: paused;
+                    }
+
+                    .client-logo-item img {
+                        height: 80px;
+                        /* Base height for desktop */
+                        width: auto;
+                        max-width: 200px;
+                        object-fit: contain;
+                    }
+
+                    @keyframes marqueeClients {
+                        0% {
+                            transform: translateX(0);
+                        }
+
+                        100% {
+                            transform: translateX(-50%);
+                        }
+                    }
+
+                    /* Responsive logo sizes */
+                    @media (max-width: 768px) {
+                        .client-track {
+                            gap: 30px;
+                        }
+
+                        .client-logo-item img {
+                            height: 60px;
+                            /* Slightly smaller on mobile */
+                            max-width: 150px;
+                        }
+                    }
+
+                    @media (max-width: 480px) {
+                        .client-track {
+                            gap: 20px;
+                        }
+
+                        .client-logo-item img {
+                            height: 50px;
+                            /* Smallest on very small phones */
+                            max-width: 120px;
+                        }
+                    }
+                </style>
+
+                <div class="client-showcase">
+                    <div class="client-track">
+                        <!-- SET 1 -->
+                        <div class="client-logo-item"><img src="images/clients/1.webp"
+                                class="hover-scale-1-2 transition-all" alt="Escorts" title="Escorts"></div>
+                        <div class="client-logo-item"><img src="images/clients/2.webp"
+                                class="hover-scale-1-2 transition-all" alt="Sanrio Puroland" title="Sanrio Puroland">
+                        </div>
+                        <div class="client-logo-item"><img src="images/clients/3.webp"
+                                class="hover-scale-1-2 transition-all" alt="Honda" title="Honda"></div>
+                        <div class="client-logo-item"><img src="images/clients/4.webp"
+                                class="hover-scale-1-2 transition-all" alt="Indian Railways" title="Indian Railways">
+                        </div>
+                        <div class="client-logo-item"><img src="images/clients/5.webp"
+                                class="hover-scale-1-2 transition-all" alt="JCB" title="JCB"></div>
+                        <div class="client-logo-item"><img src="images/clients/6.webp"
+                                class="hover-scale-1-2 transition-all" alt="Universal Studios Singapore"
+                                title="Universal Studios Singapore"></div>
+                        <div class="client-logo-item"><img src="images/clients/7.webp"
+                                class="hover-scale-1-2 transition-all" alt="Bata" title="Bata"></div>
+                        <div class="client-logo-item"><img src="images/clients/8.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 8"></div>
+                        <div class="client-logo-item"><img src="images/clients/9.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 9"></div>
+                        <div class="client-logo-item"><img src="images/clients/10.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 10"></div>
+                        <div class="client-logo-item"><img src="images/clients/11.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 11"></div>
+                        <div class="client-logo-item"><img src="images/clients/12.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 12"></div>
+                        <div class="client-logo-item"><img src="images/clients/13.avif"
+                                class="hover-scale-1-2 transition-all" alt="Client 13"></div>
+                        <div class="client-logo-item"><img src="images/clients/14.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 14"></div>
+                        <div class="client-logo-item"><img src="images/clients/15.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 15"></div>
+                        <div class="client-logo-item"><img src="images/clients/16.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 16"></div>
+                        <div class="client-logo-item"><img src="images/clients/17.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 17"></div>
+                        <div class="client-logo-item"><img src="images/clients/18.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 18"></div>
+                        <div class="client-logo-item"><img src="images/clients/19.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 19"></div>
+                        <div class="client-logo-item"><img src="images/clients/20.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 20"></div>
+                        <div class="client-logo-item"><img src="images/clients/21.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 21"></div>
+                        <div class="client-logo-item"><img src="images/clients/22.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 22"></div>
+                        <div class="client-logo-item"><img src="images/clients/23.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 23"></div>
+                        <div class="client-logo-item"><img src="images/clients/24.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 24"></div>
+                        <div class="client-logo-item"><img src="images/clients/25.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 25"></div>
+
+                        <!-- SET 2 (Duplicate for infinite seamless loop) -->
+                        <div class="client-logo-item"><img src="images/clients/1.webp"
+                                class="hover-scale-1-2 transition-all" alt="Escorts" title="Escorts"></div>
+                        <div class="client-logo-item"><img src="images/clients/2.webp"
+                                class="hover-scale-1-2 transition-all" alt="Sanrio Puroland" title="Sanrio Puroland">
+                        </div>
+                        <div class="client-logo-item"><img src="images/clients/3.webp"
+                                class="hover-scale-1-2 transition-all" alt="Honda" title="Honda"></div>
+                        <div class="client-logo-item"><img src="images/clients/4.webp"
+                                class="hover-scale-1-2 transition-all" alt="Indian Railways" title="Indian Railways">
+                        </div>
+                        <div class="client-logo-item"><img src="images/clients/5.webp"
+                                class="hover-scale-1-2 transition-all" alt="JCB" title="JCB"></div>
+                        <div class="client-logo-item"><img src="images/clients/6.webp"
+                                class="hover-scale-1-2 transition-all" alt="Universal Studios Singapore"
+                                title="Universal Studios Singapore"></div>
+                        <div class="client-logo-item"><img src="images/clients/7.webp"
+                                class="hover-scale-1-2 transition-all" alt="Bata" title="Bata"></div>
+                        <div class="client-logo-item"><img src="images/clients/8.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 8"></div>
+                        <div class="client-logo-item"><img src="images/clients/9.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 9"></div>
+                        <div class="client-logo-item"><img src="images/clients/10.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 10"></div>
+                        <div class="client-logo-item"><img src="images/clients/11.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 11"></div>
+                        <div class="client-logo-item"><img src="images/clients/12.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 12"></div>
+                        <div class="client-logo-item"><img src="images/clients/13.avif"
+                                class="hover-scale-1-2 transition-all" alt="Client 13"></div>
+                        <div class="client-logo-item"><img src="images/clients/14.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 14"></div>
+                        <div class="client-logo-item"><img src="images/clients/15.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 15"></div>
+                        <div class="client-logo-item"><img src="images/clients/16.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 16"></div>
+                        <div class="client-logo-item"><img src="images/clients/17.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 17"></div>
+                        <div class="client-logo-item"><img src="images/clients/18.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 18"></div>
+                        <div class="client-logo-item"><img src="images/clients/19.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 19"></div>
+                        <div class="client-logo-item"><img src="images/clients/20.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 20"></div>
+                        <div class="client-logo-item"><img src="images/clients/21.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 21"></div>
+                        <div class="client-logo-item"><img src="images/clients/22.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 22"></div>
+                        <div class="client-logo-item"><img src="images/clients/23.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 23"></div>
+                        <div class="client-logo-item"><img src="images/clients/24.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 24"></div>
+                        <div class="client-logo-item"><img src="images/clients/25.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 25"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-dark bg-dark text-light">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-6 offset-lg-3 text-center">
+                        <div class="subtitle s2 wow fadeInUp mb-3">Latest Post</div>
+                        <h2 class="wow fadeInUp text-white" data-wow-delay=".2s">Industrial Insights</h2>
+                    </div>
+                </div>
+                <div class="row g-4 justify-content-center">
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="bloglist">
+                            <div class="post-content">
+                                <div class="post-image">
+                                    <img alt="Industrial Fan Selection Guide" src="images/background/1.jpg" class="w-100">
+                                </div>
+                                <div class="post-text">
+                                    <h4 class="mb-3"><a href="blog.html">How to Choose the Right Industrial Fan for Your Factory</a></h4>
+                                    <p class="mb-4">In large industrial environments such as factories and warehouses, maintaining proper airflow is essential for productivity and safety...</p>
+                                    <a href="blog.html" class="btn-main btn-sm">Read More</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="col-lg-1 col-md-2 col-4">
-                        <img src="images/clients/2.webp" class="img-fluid client-logo hover-scale-1-2 transition-all"
-                            alt="Sanrio Puroland" title="Sanrio Puroland">
-                    </div>
-
-                    <div class="col-lg-1 col-md-2 col-4">
-                        <img src="images/clients/3.webp" class="img-fluid client-logo hover-scale-1-2 transition-all"
-                            alt="Honda" title="Honda">
-                    </div>
-
-                    <div class="col-lg-1 col-md-2 col-4">
-                        <img src="images/clients/4.webp" class="img-fluid client-logo hover-scale-1-2 transition-all"
-                            alt="Indian Railways" title="Indian Railways">
-                    </div>
-
-                    <div class="col-lg-1 col-md-2 col-4">
-                        <img src="images/clients/5.webp" class="img-fluid client-logo hover-scale-1-2 transition-all"
-                            alt="JCB" title="JCB">
-                    </div>
-
-                    <div class="col-lg-1 col-md-2 col-4">
-                        <img src="images/clients/6.webp" class="img-fluid client-logo hover-scale-1-2 transition-all"
-                            alt="Universal Studios Singapore" title="Universal Studios Singapore">
-                    </div>
-
-                    <div class="col-lg-1 col-md-2 col-4">
-                        <img src="images/clients/7.webp" class="img-fluid client-logo hover-scale-1-2 transition-all"
-                            alt="Bata" title="Bata">
-                    </div>
-
-                    <div class="col-lg-1 col-md-2 col-4">
-                        <img src="images/clients/8.webp" class="img-fluid client-logo" alt="Client 8">
-                    </div>
-
-                    <div class="col-lg-1 col-md-2 col-4">
-                        <img src="images/clients/9.webp" class="img-fluid client-logo" alt="Client 9">
-                    </div>
-
-                    <div class="col-lg-1 col-md-2 col-4">
-                        <img src="images/clients/10.webp" class="img-fluid client-logo" alt="Client 10">
+                    <div class="col-lg-12 text-center mt-5">
+                        <a href="blog.html" class="btn-main fx-slide wow fadeInUp">
+                            <span>View All Posts</span>
+                        </a>
                     </div>
 
                 </div>
             </div>
         </section>
+
+        <section class="bg-color text-light pt40 pb40">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8 col-sm-12">
+                        <h3 class="mb-0">Ready to upgrade your industrial ventilation?</h3>
+                        <p class="mb-0 op-7">Contact our experts today for a customized cooling solution.</p>
+                    </div>
+                    <div class="col-md-4 col-sm-12 text-lg-end text-sm-start mt-sm-30">
+                        <a href="contact.html" class="btn-main">Get a Free Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
 
         <footer class="section-dark text-light pt-60">
             <div class="container">
@@ -2561,9 +2804,10 @@
                     <div class="col-lg-3 col-md-6">
                         <h5 class="text-white mb-3">Quick Links</h5>
                         <ul class="list-unstyled">
-                            <li><a href="index.html" class="text-light">Home</a></li>
+                            <li><a href="home.html" class="text-light">Home</a></li>
                             <li><a href="about.html" class="text-light">About Us</a></li>
                             <li><a href="products.html" class="text-light">Products</a></li>
+                            <li><a href="blog.html" class="text-light">Blog</a></li>
                             <li><a href="contact.html" class="text-light">Contact Us</a></li>
                         </ul>
                     </div>

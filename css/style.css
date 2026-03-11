@@ -57,7 +57,7 @@ Table of content:
 @import url("../fonts/fontawesome6/css/fontawesome.css");
 @import url("../fonts/fontawesome6/css/brands.css");
 @import url("../fonts/fontawesome6/css/solid.css");
-@import url("../fonts/elegant_font/HTML_CSS/style.css");
+@import url("../fonts/elegant_font/html_css/style.css?v=2.0");
 @import url("../fonts/et-line-font/style.css");
 @import url("../fonts/icofont/icofont.min.css");
 
@@ -2457,11 +2457,11 @@ header.header-light .h-phone span {
   -webkit-border-radius: 0px;
   -moz-appearance: none;
   appearance: none;
-  background: url('../images/ui/arrow-down-form.png') no-repeat 98% 60%;
+  background: url('../images/ui/arrow-down-form.webp') no-repeat 98% 60%;
 }
 
 .form-underline select:focus {
-  background: url('../images/ui/arrow-down-form-hover.png') no-repeat 98% 60%;
+  background: url('../images/ui/arrow-down-form-hover.webp') no-repeat 98% 60%;
 }
 
 .form-underline input[type=text],
@@ -13106,7 +13106,7 @@ img {
   header.header-mobile #mainmenu>li>span {
     width: 36px;
     height: 36px;
-    background: url(../images/ui/arrow-down-light.png) center no-repeat;
+    background: url(../images/ui/arrow-down-light.webp) center no-repeat;
     position: absolute;
     right: 0;
     margin-top: 10px;
@@ -13115,21 +13115,21 @@ img {
   }
 
   .dark-scheme header.header-mobile #mainmenu>li>span {
-    background: url(../images/ui/arrow-down-light.png) center no-repeat;
+    background: url(../images/ui/arrow-down-light.webp) center no-repeat;
   }
 
   header.header-mobile #mainmenu li span.active {
-    background: url(../images/ui/arrow-up-light.png) center no-repeat;
+    background: url(../images/ui/arrow-up-light.webp) center no-repeat;
   }
 
   .dark-scheme header.header-mobile #mainmenu li span.active {
-    background: url(../images/ui/arrow-up-light.png) center no-repeat;
+    background: url(../images/ui/arrow-up-light.webp) center no-repeat;
   }
 
   header.header-mobile #mainmenu li>ul>li>span {
     width: 36px;
     height: 36px;
-    background: url(../images/ui/arrow-down.png) center no-repeat;
+    background: url(../images/ui/arrow-down.webp) center no-repeat;
     position: absolute;
     right: 0;
     margin-top: -45px;
@@ -13138,7 +13138,7 @@ img {
   }
 
   header.header-mobile #mainmenu>li>ul>li>span.active {
-    background: url(../images/ui/arrow-up.png) center no-repeat;
+    background: url(../images/ui/arrow-up.webp) center no-repeat;
   }
 
   header.header-mobile #mainmenu li ul li a.menu-item {
@@ -13155,12 +13155,12 @@ img {
 
   header.header-light.header-mobile #mainmenu>li>span,
   header.header-light.header-mobile #mainmenu li>ul>li>span {
-    background: url(../images/ui/arrow-down.png) center no-repeat;
+    background: url(../images/ui/arrow-down.webp) center no-repeat;
   }
 
   header.header-light.header-mobile #mainmenu>li>span.active,
   header.header-light.header-mobile #mainmenu li>ul>li>span.active {
-    background: url(../images/ui/arrow-up.png) center no-repeat;
+    background: url(../images/ui/arrow-up.webp) center no-repeat;
   }
 
   #mainmenu li ul.mega {

@@ -50,10 +50,8 @@
 
 <body>
     <div id="wrapper">
-        <div class="float-text show-on-scroll">
-            <span><a href="#">Scroll to top</a></span>
-        </div>
-        <div class="scrollbar-v show-on-scroll"></div>
+
+
 
         <!-- page preloader begin -->
         <div id="de-loader">
@@ -71,7 +69,7 @@
 
                             <!-- LOGO (ONLY ONE IMAGE) -->
                             <div class="aa-header__left">
-                                <a class="aa-logo" href="index.html" aria-label="Action Aire Home">
+                                <a class="aa-logo" href="home.html" aria-label="Action Aire Home">
                                     <img class="aa-logo__img" src="images/logo.webp" alt="Action Aire">
                                 </a>
                             </div>
@@ -79,7 +77,7 @@
                             <!-- DESKTOP NAV -->
                             <nav class="aa-nav d-none d-lg-flex" aria-label="Main navigation">
                                 <ul class="aa-menu">
-                                    <li><a class="aa-link" href="index.html">Home</a></li>
+                                    <li><a class="aa-link" href="home.html">Home</a></li>
                                     <li><a class="aa-link" href="about.html">About</a></li>
                                     <li><a class="aa-link" href="bldc.html">BLDC <span
                                                 class="badge-new blinking">NEW</span></a></li>
@@ -106,6 +104,7 @@
                                         </ul>
                                     </li>
 
+                                    <li><a class="aa-link" href="blog.html">Blog</a></li>
                                     <li><a class="aa-link" href="contact.html">Contact</a></li>
                                 </ul>
                             </nav>
@@ -130,7 +129,7 @@
                 <div class="aa-mobile__panel">
                     <div class="aa-mobile__top">
                         <!-- MOBILE LOGO (NOW INCLUDED) -->
-                        <a class="aa-mobile__brand" href="index.html" aria-label="Action Aire Home">
+                        <a class="aa-mobile__brand" href="home.html" aria-label="Action Aire Home">
                             <img src="images/logo.webp" alt="Action Aire">
                         </a>
 
@@ -140,7 +139,7 @@
                     </div>
 
                     <ul class="aa-mobile__menu">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="bldc.html">BLDC <span class="badge-new blinking">NEW</span></a></li>
 
@@ -170,6 +169,7 @@
                             </div>
                         </li>
 
+                        <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
 
@@ -566,7 +566,7 @@
 
             <!-- Hero Section -->
             <section id="subheader" class="relative jarallax text-light">
-                <img src="images/background/2.png" class="jarallax-img" alt="">
+                <img src="images/background/2.webp" class="jarallax-img" alt="">
                 <div class="container relative z-2">
                     <div class="row justify-content-center">
                         <div class="col-lg-8 text-center">
@@ -596,7 +596,7 @@
                                 </div>
 
                                 <!-- Replace with factory/production image -->
-                                <img src="images/about/about.jpeg" class="img-fluid wow scaleIn"
+                                <img src="images/about/about.webp" class="img-fluid wow scaleIn"
                                     alt="Industrial Fan Manufacturing">
                             </div>
                         </div>
@@ -718,60 +718,186 @@
                     </div>
                 </div>
 
-                <!-- Clients Logos -->
-                <div class="row align-items-center justify-content-center text-center g-4">
+                <!-- Clients Logos Marquee -->
+                <style>
+                    .client-showcase {
+                        overflow: hidden;
+                        width: 100%;
+                        padding: 10px 0;
+                        position: relative;
+                    }
 
-                    <div class="col-lg-1 col-md-2 col-4">
-                        <img src="images/clients/1.webp" class="img-fluid client-logo hover-scale-1-2 transition-all"
-                            alt="Escorts" title="Escorts">
+                    .client-track {
+                        display: flex;
+                        gap: 40px;
+                        width: max-content;
+                        align-items: center;
+                        animation: marqueeClients 40s linear infinite;
+                    }
+
+                    .client-track:hover {
+                        animation-play-state: paused;
+                    }
+
+                    .client-logo-item img {
+                        height: 80px;
+                        /* Base height for desktop */
+                        width: auto;
+                        max-width: 200px;
+                        object-fit: contain;
+                    }
+
+                    @keyframes marqueeClients {
+                        0% {
+                            transform: translateX(0);
+                        }
+
+                        100% {
+                            transform: translateX(-50%);
+                        }
+                    }
+
+                    /* Responsive logo sizes */
+                    @media (max-width: 768px) {
+                        .client-track {
+                            gap: 30px;
+                        }
+
+                        .client-logo-item img {
+                            height: 60px;
+                            /* Slightly smaller on mobile */
+                            max-width: 150px;
+                        }
+                    }
+
+                    @media (max-width: 480px) {
+                        .client-track {
+                            gap: 20px;
+                        }
+
+                        .client-logo-item img {
+                            height: 50px;
+                            /* Smallest on very small phones */
+                            max-width: 120px;
+                        }
+                    }
+                </style>
+
+                <div class="client-showcase">
+                    <div class="client-track">
+                        <!-- SET 1 -->
+                        <div class="client-logo-item"><img src="images/clients/1.webp"
+                                class="hover-scale-1-2 transition-all" alt="Escorts" title="Escorts"></div>
+                        <div class="client-logo-item"><img src="images/clients/2.webp"
+                                class="hover-scale-1-2 transition-all" alt="Sanrio Puroland" title="Sanrio Puroland">
+                        </div>
+                        <div class="client-logo-item"><img src="images/clients/3.webp"
+                                class="hover-scale-1-2 transition-all" alt="Honda" title="Honda"></div>
+                        <div class="client-logo-item"><img src="images/clients/4.webp"
+                                class="hover-scale-1-2 transition-all" alt="Indian Railways" title="Indian Railways">
+                        </div>
+                        <div class="client-logo-item"><img src="images/clients/5.webp"
+                                class="hover-scale-1-2 transition-all" alt="JCB" title="JCB"></div>
+                        <div class="client-logo-item"><img src="images/clients/6.webp"
+                                class="hover-scale-1-2 transition-all" alt="Universal Studios Singapore"
+                                title="Universal Studios Singapore"></div>
+                        <div class="client-logo-item"><img src="images/clients/7.webp"
+                                class="hover-scale-1-2 transition-all" alt="Bata" title="Bata"></div>
+                        <div class="client-logo-item"><img src="images/clients/8.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 8"></div>
+                        <div class="client-logo-item"><img src="images/clients/9.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 9"></div>
+                        <div class="client-logo-item"><img src="images/clients/10.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 10"></div>
+                        <div class="client-logo-item"><img src="images/clients/11.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 11"></div>
+                        <div class="client-logo-item"><img src="images/clients/12.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 12"></div>
+                        <div class="client-logo-item"><img src="images/clients/13.avif"
+                                class="hover-scale-1-2 transition-all" alt="Client 13"></div>
+                        <div class="client-logo-item"><img src="images/clients/14.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 14"></div>
+                        <div class="client-logo-item"><img src="images/clients/15.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 15"></div>
+                        <div class="client-logo-item"><img src="images/clients/16.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 16"></div>
+                        <div class="client-logo-item"><img src="images/clients/17.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 17"></div>
+                        <div class="client-logo-item"><img src="images/clients/18.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 18"></div>
+                        <div class="client-logo-item"><img src="images/clients/19.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 19"></div>
+                        <div class="client-logo-item"><img src="images/clients/20.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 20"></div>
+                        <div class="client-logo-item"><img src="images/clients/21.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 21"></div>
+                        <div class="client-logo-item"><img src="images/clients/22.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 22"></div>
+                        <div class="client-logo-item"><img src="images/clients/23.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 23"></div>
+                        <div class="client-logo-item"><img src="images/clients/24.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 24"></div>
+                        <div class="client-logo-item"><img src="images/clients/25.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 25"></div>
+
+                        <!-- SET 2 (Duplicate for infinite seamless loop) -->
+                        <div class="client-logo-item"><img src="images/clients/1.webp"
+                                class="hover-scale-1-2 transition-all" alt="Escorts" title="Escorts"></div>
+                        <div class="client-logo-item"><img src="images/clients/2.webp"
+                                class="hover-scale-1-2 transition-all" alt="Sanrio Puroland" title="Sanrio Puroland">
+                        </div>
+                        <div class="client-logo-item"><img src="images/clients/3.webp"
+                                class="hover-scale-1-2 transition-all" alt="Honda" title="Honda"></div>
+                        <div class="client-logo-item"><img src="images/clients/4.webp"
+                                class="hover-scale-1-2 transition-all" alt="Indian Railways" title="Indian Railways">
+                        </div>
+                        <div class="client-logo-item"><img src="images/clients/5.webp"
+                                class="hover-scale-1-2 transition-all" alt="JCB" title="JCB"></div>
+                        <div class="client-logo-item"><img src="images/clients/6.webp"
+                                class="hover-scale-1-2 transition-all" alt="Universal Studios Singapore"
+                                title="Universal Studios Singapore"></div>
+                        <div class="client-logo-item"><img src="images/clients/7.webp"
+                                class="hover-scale-1-2 transition-all" alt="Bata" title="Bata"></div>
+                        <div class="client-logo-item"><img src="images/clients/8.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 8"></div>
+                        <div class="client-logo-item"><img src="images/clients/9.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 9"></div>
+                        <div class="client-logo-item"><img src="images/clients/10.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 10"></div>
+                        <div class="client-logo-item"><img src="images/clients/11.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 11"></div>
+                        <div class="client-logo-item"><img src="images/clients/12.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 12"></div>
+                        <div class="client-logo-item"><img src="images/clients/13.avif"
+                                class="hover-scale-1-2 transition-all" alt="Client 13"></div>
+                        <div class="client-logo-item"><img src="images/clients/14.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 14"></div>
+                        <div class="client-logo-item"><img src="images/clients/15.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 15"></div>
+                        <div class="client-logo-item"><img src="images/clients/16.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 16"></div>
+                        <div class="client-logo-item"><img src="images/clients/17.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 17"></div>
+                        <div class="client-logo-item"><img src="images/clients/18.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 18"></div>
+                        <div class="client-logo-item"><img src="images/clients/19.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 19"></div>
+                        <div class="client-logo-item"><img src="images/clients/20.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 20"></div>
+                        <div class="client-logo-item"><img src="images/clients/21.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 21"></div>
+                        <div class="client-logo-item"><img src="images/clients/22.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 22"></div>
+                        <div class="client-logo-item"><img src="images/clients/23.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 23"></div>
+                        <div class="client-logo-item"><img src="images/clients/24.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 24"></div>
+                        <div class="client-logo-item"><img src="images/clients/25.webp"
+                                class="hover-scale-1-2 transition-all" alt="Client 25"></div>
                     </div>
-
-                    <div class="col-lg-1 col-md-2 col-4">
-                        <img src="images/clients/2.webp" class="img-fluid client-logo hover-scale-1-2 transition-all"
-                            alt="Sanrio Puroland" title="Sanrio Puroland">
-                    </div>
-
-                    <div class="col-lg-1 col-md-2 col-4">
-                        <img src="images/clients/3.webp" class="img-fluid client-logo hover-scale-1-2 transition-all"
-                            alt="Honda" title="Honda">
-                    </div>
-
-                    <div class="col-lg-1 col-md-2 col-4">
-                        <img src="images/clients/4.webp" class="img-fluid client-logo hover-scale-1-2 transition-all"
-                            alt="Indian Railways" title="Indian Railways">
-                    </div>
-
-                    <div class="col-lg-1 col-md-2 col-4">
-                        <img src="images/clients/5.webp" class="img-fluid client-logo hover-scale-1-2 transition-all"
-                            alt="JCB" title="JCB">
-                    </div>
-
-                    <div class="col-lg-1 col-md-2 col-4">
-                        <img src="images/clients/6.webp" class="img-fluid client-logo hover-scale-1-2 transition-all"
-                            alt="Universal Studios Singapore" title="Universal Studios Singapore">
-                    </div>
-
-                    <div class="col-lg-1 col-md-2 col-4">
-                        <img src="images/clients/7.webp" class="img-fluid client-logo hover-scale-1-2 transition-all"
-                            alt="Bata" title="Bata">
-                    </div>
-
-                    <div class="col-lg-1 col-md-2 col-4">
-                        <img src="images/clients/8.webp" class="img-fluid client-logo" alt="Client 8">
-                    </div>
-
-                    <div class="col-lg-1 col-md-2 col-4">
-                        <img src="images/clients/9.webp" class="img-fluid client-logo" alt="Client 9">
-                    </div>
-
-                    <div class="col-lg-1 col-md-2 col-4">
-                        <img src="images/clients/10.webp" class="img-fluid client-logo" alt="Client 10">
-                    </div>
-
                 </div>
             </div>
         </section>
-
         <!-- content close -->
 
         <!-- footer begin -->
@@ -802,9 +928,10 @@
                     <div class="col-lg-3 col-md-6">
                         <h5 class="text-white mb-3">Quick Links</h5>
                         <ul class="list-unstyled">
-                            <li><a href="index.html" class="text-light">Home</a></li>
+                            <li><a href="home.html" class="text-light">Home</a></li>
                             <li><a href="about.html" class="text-light">About Us</a></li>
                             <li><a href="products.html" class="text-light">Products</a></li>
+                            <li><a href="blog.html" class="text-light">Blog</a></li>
                             <li><a href="contact.html" class="text-light">Contact Us</a></li>
                         </ul>
                     </div>

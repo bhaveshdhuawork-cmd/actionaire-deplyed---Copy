@@ -18,32 +18,7 @@
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
 
     <style>
-        /* =====================
-           BLDC LAUNCHING SOON PAGE STYLES
-        ===================== */
-
-        /* Hero Section */
-        .bldc-hero {
-            background-color: #8B0000;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .bldc-hero-main {
-            display: flex;
-            align-items: center;
-            flex: 1;
-            padding: 80px 0 60px;
-        }
-
         /* Fan Image */
-        .bldc-fan-col {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
         .bldc-fan-img {
             max-height: 520px;
             width: auto;
@@ -64,61 +39,23 @@
             }
         }
 
-        /* Right Content */
-        .bldc-content-col {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-left: 20px;
-        }
-
-        /* BLDC Big Title */
-        .bldc-title-text {
-            font-size: clamp(90px, 13vw, 180px);
-            font-weight: 900;
-            color: #ffffff;
-            line-height: 0.85;
-            letter-spacing: -4px;
-            font-family: 'Arial Black', 'Arial', sans-serif;
-            margin: 0;
-            text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
-        }
-
         .bldc-launching-badge {
             display: inline-block;
-            background-color: #ffffff;
-            color: #8B0000;
-            font-size: clamp(14px, 2vw, 22px);
-            font-weight: 900;
-            letter-spacing: 3px;
+            background-color: var(--primary-color, #c8102e);
+            color: #ffffff;
+            font-size: clamp(14px, 1.5vw, 18px);
+            font-weight: 700;
+            letter-spacing: 2px;
             text-transform: uppercase;
             padding: 8px 20px;
-            margin-top: 8px;
-            margin-bottom: 28px;
-        }
-
-        .bldc-description {
-            color: #ffffff;
-            font-size: clamp(13px, 1.1vw, 16px);
-            line-height: 1.75;
-            max-width: 520px;
-            opacity: 0.92;
+            border-radius: 4px;
         }
 
         /* Countdown Section */
-        .bldc-countdown-section {
-            background-color: #6B0000;
-            padding: 40px 0;
-            border-top: 2px solid rgba(255, 255, 255, 0.1);
-        }
-
         .countdown-label-top {
-            text-align: center;
-            color: rgba(255, 255, 255, 0.7);
             font-size: 14px;
             letter-spacing: 3px;
             text-transform: uppercase;
-            margin-bottom: 24px;
         }
 
         .countdown-wrapper {
@@ -143,7 +80,6 @@
             display: block;
             font-size: clamp(36px, 5vw, 60px);
             font-weight: 900;
-            color: #ffffff;
             line-height: 1;
             font-family: 'Arial Black', 'Arial', sans-serif;
         }
@@ -153,142 +89,16 @@
             font-size: 11px;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.6);
             margin-top: 6px;
         }
 
         .countdown-separator {
             font-size: 40px;
             font-weight: 900;
-            color: rgba(255, 255, 255, 0.4);
             margin-bottom: 20px;
         }
 
         /* Notify Form */
-        .bldc-notify-section {
-            background-color: #750000;
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        .notify-heading {
-            color: #ffffff;
-            font-size: clamp(20px, 3vw, 32px);
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .notify-subheading {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 15px;
-            margin-bottom: 30px;
-        }
-
-        .notify-form {
-            display: flex;
-            justify-content: center;
-            gap: 0;
-            max-width: 480px;
-            margin: 0 auto;
-        }
-
-        .notify-input {
-            flex: 1;
-            padding: 14px 20px;
-            border: none;
-            border-radius: 4px 0 0 4px;
-            font-size: 15px;
-            outline: none;
-            background: rgba(255, 255, 255, 0.95);
-        }
-
-        .notify-btn {
-            background-color: #ffffff;
-            color: #8B0000;
-            border: none;
-            padding: 14px 28px;
-            font-weight: 800;
-            font-size: 14px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            border-radius: 0 4px 4px 0;
-            cursor: pointer;
-            transition: background 0.2s, color 0.2s;
-        }
-
-        .notify-btn:hover {
-            background-color: #f0d0d0;
-        }
-
-        .notify-success {
-            display: none;
-            color: #90ee90;
-            font-weight: 600;
-            margin-top: 14px;
-            font-size: 15px;
-        }
-
-        /* Features Strip */
-        .bldc-features-strip {
-            background-color: #5a0000;
-            padding: 40px 0;
-            border-top: 2px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .feature-item {
-            text-align: center;
-            color: #ffffff;
-            padding: 10px;
-        }
-
-        .feature-icon {
-            font-size: 32px;
-            color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 10px;
-        }
-
-        .feature-title {
-            font-size: 15px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 6px;
-        }
-
-        .feature-desc {
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.65);
-            line-height: 1.5;
-        }
-
-        /* Responsive */
-        @media (max-width: 991px) {
-            .bldc-hero-main {
-                padding: 100px 0 40px;
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .bldc-content-col {
-                padding-left: 0;
-                align-items: center;
-                text-align: center;
-            }
-
-            .bldc-description {
-                text-align: center;
-            }
-
-            .bldc-fan-img {
-                max-height: 320px;
-                margin-bottom: 30px;
-            }
-
-            .bldc-title-text {
-                letter-spacing: -2px;
-            }
-        }
-
         @media (max-width: 576px) {
             .countdown-box {
                 min-width: 70px;
@@ -302,7 +112,7 @@
 
             .notify-input,
             .notify-btn {
-                border-radius: 4px;
+                border-radius: 4px !important;
                 width: 100%;
             }
         }
@@ -322,7 +132,7 @@
 
                             <!-- LOGO (ONLY ONE IMAGE) -->
                             <div class="aa-header__left">
-                                <a class="aa-logo" href="index.html" aria-label="Action Aire Home">
+                                <a class="aa-logo" href="home.html" aria-label="Action Aire Home">
                                     <img class="aa-logo__img" src="images/logo.webp" alt="Action Aire">
                                 </a>
                             </div>
@@ -330,7 +140,7 @@
                             <!-- DESKTOP NAV -->
                             <nav class="aa-nav d-none d-lg-flex" aria-label="Main navigation">
                                 <ul class="aa-menu">
-                                    <li><a class="aa-link" href="index.html">Home</a></li>
+                                    <li><a class="aa-link" href="home.html">Home</a></li>
                                     <li><a class="aa-link" href="about.html">About</a></li>
                                     <li><a class="aa-link" href="bldc.html">BLDC <span
                                                 class="badge-new blinking">NEW</span></a></li>
@@ -357,6 +167,7 @@
                                         </ul>
                                     </li>
 
+                                    <li><a class="aa-link" href="blog.html">Blog</a></li>
                                     <li><a class="aa-link" href="contact.html">Contact</a></li>
                                 </ul>
                             </nav>
@@ -381,7 +192,7 @@
                 <div class="aa-mobile__panel">
                     <div class="aa-mobile__top">
                         <!-- MOBILE LOGO (NOW INCLUDED) -->
-                        <a class="aa-mobile__brand" href="index.html" aria-label="Action Aire Home">
+                        <a class="aa-mobile__brand" href="home.html" aria-label="Action Aire Home">
                             <img src="images/logo.webp" alt="Action Aire">
                         </a>
 
@@ -391,7 +202,7 @@
                     </div>
 
                     <ul class="aa-mobile__menu">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="bldc.html">BLDC <span class="badge-new blinking">NEW</span></a></li>
 
@@ -421,6 +232,7 @@
                             </div>
                         </li>
 
+                        <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
 
@@ -817,18 +629,32 @@
             <!-- =====================
                  HERO SECTION
             ===================== -->
-            <div class="bldc-hero">
+            <!-- subheader -->
+            <section id="subheader" class="relative jarallax text-light">
+                <img src="images/background/1.webp" class="jarallax-img" alt="">
+                <div class="container relative z-2">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 text-center">
+                            <div class="subtitle s2 text-light wow fadeInUp mb-2">Category</div>
+                            <h1>BLDC Fans</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="sw-overlay"></div>
+            </section>
+            <!-- subheader close -->
 
-                <div class="bldc-hero-main container">
-                    <div class="row align-items-center w-100">
-
+            <!-- BLDC LAUNCH INFO -->
+            <section class="pt80 pb80 bg-color text-light border-bottom border-light">
+                <div class="container">
+                    <div class="row align-items-center">
                         <!-- Fan Image -->
-                        <div class="col-lg-5 bldc-fan-col mb-4 mb-lg-0">
-                            <img src="images/bldc-fan.webp" alt="BLDC Fan" class="bldc-fan-img"
+                        <div class="col-lg-5 text-center mb-sm-30">
+                            <img src="images/bldc-fan.webp" alt="BLDC Fan" class="bldc-fan-img img-fluid"
                                 onerror="this.style.display='none'; document.getElementById('fan-placeholder').style.display='flex';">
                             <!-- Placeholder if no image -->
                             <div id="fan-placeholder"
-                                style="display:none; width:300px; height:420px; background:rgba(255,255,255,0.05); border-radius:16px; align-items:center; justify-content:center; border:2px dashed rgba(255,255,255,0.2);">
+                                style="display:none; width:300px; height:420px; background:rgba(255,255,255,0.05); border-radius:16px; align-items:center; justify-content:center; border:2px dashed rgba(255,255,255,0.2); margin: 0 auto;">
                                 <div style="text-align:center; color:rgba(255,255,255,0.4);">
                                     <i class="fa fa-fan" style="font-size:80px; margin-bottom:16px; display:block;"></i>
                                     <span style="font-size:13px;">Place your fan image here<br><code
@@ -838,78 +664,67 @@
                         </div>
 
                         <!-- Content -->
-                        <div class="col-lg-7 bldc-content-col">
-                            <h1 class="bldc-title-text">BLDC</h1>
-                            <div class="bldc-launching-badge">&#9679; Launching Soon</div>
-                            <p class="bldc-description">
+                        <div class="col-lg-7">
+                            <h2 class="mb-2" style="font-size: 48px; font-weight: 900; letter-spacing: -2px;">BLDC <span
+                                    style="color: #fff;">Technology</span></h2>
+                            <div class="bldc-launching-badge mb-4">&#9679; Launching Soon</div>
+                            <p class="lead" style="color: rgba(255,255,255,0.9);">
                                 Actionaire, a trusted industrial fan and HVAC manufacturer with over three decades of
                                 engineering excellence, is expanding its product portfolio to include next-generation
-                                BLDC
-                                (Brushless DC) fans. This strategic move leverages advanced energy-efficient motor
-                                technology to
-                                deliver powerful airflow with significantly lower power consumption and enhanced
-                                operational
-                                reliability – ideal for modern commercial and industrial environments seeking reduced
-                                energy
-                                costs and superior ventilation performance. With in-house design, rigorous quality
-                                control, and
-                                global manufacturing standards, Actionaire's BLDC fans are engineered for durability,
-                                efficiency, and long-term performance.
+                                BLDC (Brushless DC) fans.
+                            </p>
+                            <p style="color: rgba(255,255,255,0.8);">
+                                This strategic move leverages advanced energy-efficient motor technology to deliver
+                                powerful
+                                airflow with significantly lower power consumption and enhanced operational reliability
+                                – ideal
+                                for modern commercial and industrial environments seeking reduced energy costs and
+                                superior
+                                ventilation performance. With in-house design, rigorous quality control, and global
+                                manufacturing standards, Actionaire's BLDC fans are engineered for durability,
+                                efficiency,
+                                and long-term performance.
                             </p>
                         </div>
-
                     </div>
                 </div>
+            </section>
 
-                <!-- Countdown Timer -->
 
-                <!-- Notify Me -->
-                <div class="bldc-notify-section">
-                    <div class="container">
-                        <h3 class="notify-heading">Be the First to Know</h3>
-                        <p class="notify-subheading">Enter your email and we'll notify you the moment BLDC fans launch.
-                        </p>
-                        <div class="notify-form">
-                            <input type="email" id="notify-email" class="notify-input"
-                                placeholder="Enter your email address">
-                            <button class="notify-btn" onclick="handleNotify()">Notify Me</button>
+
+
+
+            <!-- FEATURES -->
+            <section class="pt60 pb60 border-bottom">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-lg-3 col-md-6 mb-sm-30 feature-item">
+                            <div class="feature-icon mb-3"><i class="fa fa-bolt id-color fa-3x"></i></div>
+                            <h4 class="feature-title text-dark">Energy Efficient</h4>
+                            <p class="feature-desc text-secondary">Up to 60% less power consumption vs traditional fans
+                            </p>
                         </div>
-                        <p class="notify-success" id="notify-success">
-                            <i class="fa fa-check-circle me-1"></i> Thank you! We'll notify you at launch.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Features Strip -->
-                <div class="bldc-features-strip">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-6 col-md-3 feature-item">
-                                <div class="feature-icon"><i class="fa fa-bolt"></i></div>
-                                <div class="feature-title">Energy Efficient</div>
-                                <div class="feature-desc">Up to 60% less power consumption vs traditional fans</div>
-                            </div>
-                            <div class="col-6 col-md-3 feature-item">
-                                <div class="feature-icon"><i class="fa fa-volume-xmark"></i></div>
-                                <div class="feature-title">Whisper Quiet</div>
-                                <div class="feature-desc">Ultra-low noise operation for comfort environments</div>
-                            </div>
-                            <div class="col-6 col-md-3 feature-item">
-                                <div class="feature-icon"><i class="fa fa-shield-halved"></i></div>
-                                <div class="feature-title">Long Lasting</div>
-                                <div class="feature-desc">Brushless design means fewer parts & less wear</div>
-                            </div>
-                            <div class="col-6 col-md-3 feature-item">
-                                <div class="feature-icon"><i class="fa fa-industry"></i></div>
-                                <div class="feature-title">Made in India</div>
-                                <div class="feature-desc">Designed and manufactured to global standards</div>
-                            </div>
+                        <div class="col-lg-3 col-md-6 mb-sm-30 feature-item">
+                            <div class="feature-icon mb-3"><i class="fa fa-volume-xmark id-color fa-3x"></i></div>
+                            <h4 class="feature-title text-dark">Whisper Quiet</h4>
+                            <p class="feature-desc text-secondary">Ultra-low noise operation for comfort environments
+                            </p>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-sm-30 feature-item">
+                            <div class="feature-icon mb-3"><i class="fa fa-shield-halved id-color fa-3x"></i></div>
+                            <h4 class="feature-title text-dark">Long Lasting</h4>
+                            <p class="feature-desc text-secondary">Brushless design means fewer parts & less wear</p>
+                        </div>
+                        <div class="col-lg-3 col-md-6 feature-item">
+                            <div class="feature-icon mb-3"><i class="fa fa-industry id-color fa-3x"></i></div>
+                            <h4 class="feature-title text-dark">Made in India</h4>
+                            <p class="feature-desc text-secondary">Designed and manufactured to global standards</p>
                         </div>
                     </div>
                 </div>
+            </section>
 
-            </div>
-            <!-- End BLDC Hero -->
+
 
         </div>
 
@@ -933,9 +748,10 @@
                     <div class="col-lg-3 col-md-6">
                         <h5 class="text-white mb-3">Quick Links</h5>
                         <ul class="list-unstyled">
-                            <li><a href="index.html" class="text-light">Home</a></li>
+                            <li><a href="home.html" class="text-light">Home</a></li>
                             <li><a href="about.html" class="text-light">About Us</a></li>
                             <li><a href="products.html" class="text-light">Products</a></li>
+                            <li><a href="blog.html" class="text-light">Blog</a></li>
                             <li><a href="contact.html" class="text-light">Contact Us</a></li>
                         </ul>
                     </div>
@@ -972,69 +788,77 @@
 
     <script>
         // =====================
-        // COUNTDOWN TIMER
+        // UPCOMING PRODUCT ACCORDIONS
         // =====================
-        // Set your launch date here: YYYY, Month(0-indexed), Day
-        const launchDate = new Date(2025, 11, 31, 0, 0, 0); // Dec 31, 2025
+        (function () {
+            const accordions = document.querySelectorAll('.js-ac-accordion');
 
-        function updateCountdown() {
-            const now = new Date();
-            const diff = launchDate - now;
-
-            if (diff <= 0) {
-                document.getElementById('cd-days').textContent = '00';
-                document.getElementById('cd-hours').textContent = '00';
-                document.getElementById('cd-minutes').textContent = '00';
-                document.getElementById('cd-seconds').textContent = '00';
-                return;
+            function closeAll(except) {
+                accordions.forEach(acc => {
+                    if (acc === except) return;
+                    acc.classList.remove('is-open');
+                    const btn = acc.querySelector('.js-ac-toggle');
+                    const body = acc.querySelector('.js-ac-body');
+                    if (btn) btn.setAttribute('aria-expanded', 'false');
+                    if (body) body.style.maxHeight = '0px';
+                });
             }
 
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-            document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
-            document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
-            document.getElementById('cd-minutes').textContent = String(minutes).padStart(2, '0');
-            document.getElementById('cd-seconds').textContent = String(seconds).padStart(2, '0');
-        }
-
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-
-        // =====================
-        // NOTIFY ME FORM
-        // =====================
-        function handleNotify() {
-            const emailInput = document.getElementById('notify-email');
-            const email = emailInput.value.trim();
-            const successMsg = document.getElementById('notify-success');
-
-            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                emailInput.style.border = '2px solid #ff6b6b';
-                emailInput.placeholder = 'Please enter a valid email';
-                setTimeout(() => {
-                    emailInput.style.border = '';
-                    emailInput.placeholder = 'Enter your email address';
-                }, 2000);
-                return;
+            function openAccordion(acc) {
+                const btn = acc.querySelector('.js-ac-toggle');
+                const body = acc.querySelector('.js-ac-body');
+                acc.classList.add('is-open');
+                if (btn) btn.setAttribute('aria-expanded', 'true');
+                if (body) {
+                    const inner = body.querySelector('.ac-cat-body-inner');
+                    const target = inner ? inner.scrollHeight : body.scrollHeight;
+                    body.style.maxHeight = target + 'px';
+                }
             }
 
-            // Show success
-            emailInput.value = '';
-            successMsg.style.display = 'block';
-            setTimeout(() => successMsg.style.display = 'none', 5000);
+            function toggleAccordion(acc) {
+                const isOpen = acc.classList.contains('is-open');
+                if (isOpen) {
+                    acc.classList.remove('is-open');
+                    const btn = acc.querySelector('.js-ac-toggle');
+                    const body = acc.querySelector('.js-ac-body');
+                    if (btn) btn.setAttribute('aria-expanded', 'false');
+                    if (body) body.style.maxHeight = '0px';
+                    return;
+                }
 
-            // TODO: Connect to your backend/API to save the email
-            console.log('Notify email submitted:', email);
-        }
+                closeAll(acc);
+                openAccordion(acc);
+            }
 
-        // Allow pressing Enter in the email field
-        document.getElementById('notify-email').addEventListener('keydown', function (e) {
-            if (e.key === 'Enter') handleNotify();
-        });
+            // Init
+            accordions.forEach(acc => {
+                const btn = acc.querySelector('.js-ac-toggle');
+                const body = acc.querySelector('.js-ac-body');
+
+                // default closed state
+                if (acc.classList.contains('is-open')) {
+                    openAccordion(acc);
+                } else if (body) {
+                    body.style.maxHeight = '0px';
+                }
+
+                if (btn) {
+                    btn.addEventListener('click', () => toggleAccordion(acc));
+                }
+            });
+
+            // Recalculate heights on resize (for open accordion)
+            window.addEventListener('resize', () => {
+                const open = document.querySelector('.js-ac-accordion.is-open');
+                if (!open) return;
+                const body = open.querySelector('.js-ac-body');
+                const inner = open.querySelector('.ac-cat-body-inner');
+                if (body && inner) body.style.maxHeight = inner.scrollHeight + 'px';
+            });
+        })();
     </script>
+
 </body>
 
 </html>
