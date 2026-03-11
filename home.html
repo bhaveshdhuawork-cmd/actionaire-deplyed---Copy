@@ -1614,9 +1614,6 @@
                 @media (max-width: 991px) {
                     .fan-showcase__overlay {
                         display: block;
-                        background: linear-gradient(180deg,
-                                rgba(255, 255, 255, 0.10) 0%,
-                                rgba(255, 255, 255, 0.85) 100%);
                     }
 
                     .fan-showcase__sticky {
@@ -1661,44 +1658,10 @@
                     <!-- Text content panel -->
                     <div class="fan-showcase__content">
                         <div class="container">
-                            <div class="row">
-                                <div class="col-lg-5 col-md-7 col-12 ms-lg-auto">
-
-                                    <!-- Text blocks -->
-                                    <div class="fan-showcase__texts" id="fanShowcaseTexts">
-
-                                        <!-- Step 0 -->
-                                        <div class="fan-showcase__text is-active" data-step="0">
-                                            <span class="fan-showcase__kicker">Powertrain Engineering</span>
-                                            <h2 class="fan-showcase__heading">High-Efficiency<br>TEFC Motor System</h2>
-                                            <p class="fan-showcase__desc">
-                                                Industrial-grade motor architecture delivering sustained high-RPM
-                                                output,
-                                                thermal stability, and continuous-duty reliability.
-                                            </p>
-                                        </div>
-
-                                        <!-- Step 1 -->
-                                        <div class="fan-showcase__text" data-step="1">
-                                            <span class="fan-showcase__kicker">Aerodynamic Force Delivery</span>
-                                            <h2 class="fan-showcase__heading">Precision Long-Range<br>Air Projection
-                                            </h2>
-                                            <p class="fan-showcase__desc">
-                                                Optimized blade geometry engineered for maximum CFM thrust,
-                                                deep air penetration, and controlled vibration dynamics.
-                                            </p>
-                                        </div>
-
-                                        <!-- Step 2 -->
-                                        <div class="fan-showcase__text" data-step="2">
-                                            <span class="fan-showcase__kicker">Structural Performance Design</span>
-                                            <h2 class="fan-showcase__heading">Heavy-Gauge<br>Industrial Construction
-                                            </h2>
-                                            <p class="fan-showcase__desc">
-                                                Reinforced steel body with corrosion-resistant coating, built to
-                                                withstand the most demanding operational conditions.
-                                            </p>
-                                        </div>
+                            <div class="row d-none">
+                                <div class="col-12">
+                                    <div id="fanShowcaseTexts">
+                                        <div class="fan-showcase__text is-active"></div>
 
                                     </div>
                                     <!-- /fan-showcase__texts -->
@@ -1753,7 +1716,7 @@
                         folder: 'images/seq-test',
                         startFrame: 10231,
                         frameCount: 80, // Total frames from 10231 to 10310 is 80
-                        animPortion: 0.75    /* frames animate over the first 75% of scroll travel */
+                        animPortion: 0.8    /* Animation completes over 80% of scroll for smoother transition */
                     };
 
                     /* ── State ── */
@@ -1761,6 +1724,7 @@
                     let lastGood = 0;
                     let ticking = false;
                     let hintHidden = false;
+                    let targetFrame = 0;
 
                     /* ── Helpers ── */
                     const clamp = (v, min, max) => Math.min(max, Math.max(min, v));
@@ -1782,8 +1746,8 @@
                     function getCropPreset() {
                         const isMobile = window.matchMedia('(max-width: 768px)').matches;
                         return isMobile
-                            ? { mode: 'contain', zoom: 0.75, panX: 0.50, panY: 0.15 }
-                            : { mode: 'contain', zoom: 0.55, panX: 0.10, panY: 0.50 };
+                            ? { mode: 'contain', zoom: 0.95, panX: 0.50, panY: 0.35 }
+                            : { mode: 'contain', zoom: 0.85, panX: 0.50, panY: 0.50 };
                         /* desktop: panX 0.15 = fan locked to LEFT side, zoom 0.65 reduces size to prevent overlap */
                     }
 
@@ -1857,10 +1821,11 @@
                     function update() {
                         const p = getScrollProgress();
                         const animP = clamp(p / CONFIG.animPortion, 0, 1);
-                        const frame = Math.round(animP * (CONFIG.frameCount - 1));
+                        
+                        // Linear mapping for direct scroll-to-frame sync
+                        targetFrame = Math.round(animP * (CONFIG.frameCount - 1));
 
-                        drawFrame(frame);
-                        setActiveStep(stepFromProgress(p));
+                        drawFrame(targetFrame);
 
                         if (p > 0.02) hideScrollHint();
                     }
