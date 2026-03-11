@@ -110,58 +110,502 @@
         <div class="scrollbar-v show-on-scroll"></div>
         <div id="de-loader"><img src="images/preloader.gif" alt="Loading..." style="width: 250px; height: auto;"></div>
 
-        <!-- header begin -->
-        <header class="transparent has-topbar sticky">
-            <div class="container">
+        <!-- PROFESSIONAL GLASS BLACK HEADER (Desktop + Mobile fixed) -->
+        <header class="aa-header">
+            <div class=" container">
                 <div class="row">
-                    <div class="col-md-12 py-2">
-                        <div class="de-flex sm-pt10">
-                            <div class="de-flex-col">
-                                <div id="logo">
-                                    <a href="index.html">
-                                        <img class="logo-main" src="images/logo.webp" alt="">
-                                        <img class="logo-scroll" src="images/logo-black.webp" alt="">
-                                        <img class="logo-mobile" src="images/logo.webp" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="de-flex-col header-col-mid">
-                                <!-- Same Menu as Index -->
-                                <ul id="mainmenu">
-                                    <li><a class="menu-item" href="index.html">Home</a></li>
-                                    <li><a class="menu-item" href="about.html">About</a></li>
-                                    <li><a class="menu-item" href="products.html">Products</a>
-                                        <ul>
-                                            <li><a class="menu-item" href="air-circulators.html">Air Circulators</a>
-                                            </li>
-                                            <li><a class="menu-item" href="exhaust-blower.html">Exhaust Blower</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="menu-item" href="industries.html">Industries</a></li>
-                                    <li><a class="menu-item" href="resources.html">Resources</a>
-                                        <ul>
-                                            <li><a class="menu-item" href="catalogs.html">Catalogs</a></li>
-                                            <li><a class="menu-item" href="datasheets.html">Datasheets</a></li>
-                                            <li><a class="menu-item" href="certifications.html">Certifications</a></li>
+                    <div class="col-12 py-2">
+                        <div class="aa-header__bar">
 
-                                            <li><a class="menu-item" href="faq.html">FAQ</a></li>
+                            <!-- LOGO (ONLY ONE IMAGE) -->
+                            <div class="aa-header__left">
+                                <a class="aa-logo" href="index.html" aria-label="Action Aire Home">
+                                    <img class="aa-logo__img" src="images/logo.webp" alt="Action Aire">
+                                </a>
+                            </div>
+
+                            <!-- DESKTOP NAV -->
+                            <nav class="aa-nav d-none d-lg-flex" aria-label="Main navigation">
+                                <ul class="aa-menu">
+                                    <li><a class="aa-link" href="index.html">Home</a></li>
+                                    <li><a class="aa-link" href="about.html">About</a></li>
+                                    <li><a class="aa-link" href="bldc.html">BLDC <span
+                                                class="badge-new blinking">NEW</span></a></li>
+
+                                    <li class="aa-has-sub">
+                                        <a class="aa-link" href="products.html">Products <i
+                                                class="fa fa-angle-down ms-2"></i></a>
+                                        <ul class="aa-submenu">
+                                            <li><a href="air-circulators.html">Air Circulators</a></li>
+                                            <li><a href="exhaust-blower.html">Exhaust Blower</a></li>
                                         </ul>
                                     </li>
-                                    <li><a class="menu-item" href="contact.html">Contact</a></li>
+
+                                    <li><a class="aa-link" href="industries.html">Industries</a></li>
+
+                                    <li class="aa-has-sub">
+                                        <a class="aa-link" href="resources.html">Resources <i
+                                                class="fa fa-angle-down ms-2"></i></a>
+                                        <ul class="aa-submenu">
+                                            <li><a href="catalogs.html">Catalogs</a></li>
+                                            <li><a href="datasheets.html">Datasheets</a></li>
+                                            <li><a href="certifications.html">Certifications</a></li>
+                                            <li><a href="faq.html">FAQ</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a class="aa-link" href="contact.html">Contact</a></li>
                                 </ul>
-                            </div>
-                            <div class="de-flex-col">
-                                <div class="menu_side_area d-flex align-items-center">
-                                    <a href="contact.html" class="btn-main btn-sm d-lg-none me-3">Get Quote</a>
+                            </nav>
 
-                                    <span id="menu-btn"></span>
-                                </div>
+                            <!-- RIGHT CTA + MOBILE TOGGLE -->
+                            <div class="aa-header__right">
+                                <a href="contact.html" class="btn-main btn-sm d-none d-lg-inline-flex">Get Quote</a>
+
+                                <button class="aa-burger d-lg-none" type="button" aria-label="Open menu"
+                                    aria-expanded="false" aria-controls="aaMobileNav">
+                                    <span></span><span></span><span></span>
+                                </button>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- MOBILE DRAWER -->
+            <div class="aa-mobile" id="aaMobileNav" aria-hidden="true">
+                <div class="aa-mobile__panel">
+                    <div class="aa-mobile__top">
+                        <!-- MOBILE LOGO (NOW INCLUDED) -->
+                        <a class="aa-mobile__brand" href="index.html" aria-label="Action Aire Home">
+                            <img src="images/logo.webp" alt="Action Aire">
+                        </a>
+
+                        <button class="aa-mobile__close" type="button" aria-label="Close menu">
+                            <i class="fa fa-xmark"></i>
+                        </button>
+                    </div>
+
+                    <ul class="aa-mobile__menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="bldc.html">BLDC <span class="badge-new blinking">NEW</span></a></li>
+
+                        <li class="aa-mobile__drop">
+                            <button type="button" class="aa-mobile__dropbtn" aria-expanded="false">
+                                Products <i class="fa fa-angle-down"></i>
+                            </button>
+                            <div class="aa-mobile__dropcontent">
+                                <a href="products.html">All Products</a>
+                                <a href="air-circulators.html">Air Circulators</a>
+                                <a href="exhaust-blower.html">Exhaust Blower</a>
+                            </div>
+                        </li>
+
+                        <li><a href="industries.html">Industries</a></li>
+
+                        <li class="aa-mobile__drop">
+                            <button type="button" class="aa-mobile__dropbtn" aria-expanded="false">
+                                Resources <i class="fa fa-angle-down"></i>
+                            </button>
+                            <div class="aa-mobile__dropcontent">
+                                <a href="resources.html">All Resources</a>
+                                <a href="catalogs.html">Catalogs</a>
+                                <a href="datasheets.html">Datasheets</a>
+                                <a href="certifications.html">Certifications</a>
+                                <a href="faq.html">FAQ</a>
+                            </div>
+                        </li>
+
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                    <div class="aa-mobile__cta">
+                        <a href="contact.html" class="btn-main w-100 text-center">Get Quote</a>
+                    </div>
+                </div>
+            </div>
         </header>
+
+        <style>
+            :root {
+                --aa-black: rgba(0, 0, 0, .72);
+                --aa-border: rgba(255, 255, 255, .10);
+                --aa-text: rgba(255, 255, 255, .92);
+                --aa-text-soft: rgba(255, 255, 255, .78);
+            }
+
+            /* Header wrapper */
+            .aa-header {
+                position: fixed;
+                top: 20px;
+                left: 0;
+                width: 100%;
+                z-index: 999;
+                background: transparent !important;
+                /* REMOVE full width bg */
+                transition: all .3s ease;
+            }
+
+            .aa-header--sticky {
+                position: fixed;
+                top: 12px;
+            }
+
+            /* Inner glass container only */
+            .aa-header__bar {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 18px;
+                padding: 10px 18px;
+                border-radius: 16px;
+                background: rgba(0, 0, 0, 0.65);
+                /* glass black */
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                backdrop-filter: blur(14px);
+                -webkit-backdrop-filter: blur(14px);
+                transition: all .3s ease;
+            }
+
+            /* Scroll effect (NO FULL WIDTH BG) */
+            .aa-header.scrolled {
+                top: 10px;
+            }
+
+            .aa-header.scrolled .aa-header__bar {
+                background: rgba(0, 0, 0, 0.80);
+                border-color: rgba(255, 255, 255, 0.12);
+                box-shadow: 0 12px 30px rgba(0, 0, 0, .4);
+            }
+
+            /* SINGLE LOGO */
+            .aa-logo {
+                display: inline-flex;
+                align-items: center;
+            }
+
+            .aa-logo__img {
+                height: 40px;
+                width: auto;
+                display: block;
+            }
+
+            /* Desktop menu */
+            .aa-menu {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                margin: 0;
+                padding: 0;
+            }
+
+            .aa-menu>li {
+                position: relative;
+            }
+
+            .aa-link {
+                display: inline-flex;
+                align-items: center;
+                padding: 10px 12px;
+                border-radius: 10px;
+                color: var(--aa-text);
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 14px;
+                transition: .2s;
+            }
+
+            .aa-link:hover {
+                background: rgba(255, 255, 255, .06);
+                color: #fff;
+            }
+
+            /* Dropdown */
+            .aa-submenu {
+                position: absolute;
+                top: calc(100% + 10px);
+                left: 0;
+                min-width: 230px;
+                background: rgba(0, 0, 0, .85);
+                border: 1px solid var(--aa-border);
+                backdrop-filter: blur(14px);
+                -webkit-backdrop-filter: blur(14px);
+                border-radius: 14px;
+                padding: 10px;
+                list-style: none;
+                margin: 0;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(8px);
+                transition: .2s;
+                box-shadow: 0 18px 40px rgba(0, 0, 0, .45);
+            }
+
+            .aa-submenu li a {
+                display: block;
+                padding: 10px 12px;
+                border-radius: 10px;
+                color: var(--aa-text-soft);
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 13px;
+                transition: .2s;
+            }
+
+            .aa-submenu li a:hover {
+                background: rgba(255, 255, 255, .06);
+                color: #fff;
+            }
+
+            .aa-has-sub:hover .aa-submenu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            .aa-header__right {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            /* Burger */
+            .aa-burger {
+                width: 44px;
+                height: 44px;
+                border-radius: 12px;
+                background: rgba(255, 255, 255, .06);
+                border: 1px solid var(--aa-border);
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                flex-direction: column;
+                cursor: pointer;
+            }
+
+            .aa-burger span {
+                width: 18px;
+                height: 2px;
+                background: rgba(255, 255, 255, .9);
+                display: block;
+            }
+
+            /* Mobile drawer */
+            .aa-mobile {
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, .55);
+                opacity: 0;
+                visibility: hidden;
+                transition: .2s;
+                z-index: 1000;
+            }
+
+            .aa-mobile.is-open {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .aa-mobile__panel {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: min(92vw, 380px);
+                background: rgba(0, 0, 0, .92);
+                border-left: 1px solid var(--aa-border);
+                backdrop-filter: blur(14px);
+                -webkit-backdrop-filter: blur(14px);
+                transform: translateX(100%);
+                transition: .25s;
+                padding: 18px;
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .aa-mobile.is-open .aa-mobile__panel {
+                transform: translateX(0);
+            }
+
+            .aa-mobile__top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+            }
+
+            .aa-mobile__brand img {
+                height: 38px;
+                width: auto;
+                display: block;
+            }
+
+            .aa-mobile__close {
+                width: 44px;
+                height: 44px;
+                border-radius: 12px;
+                background: rgba(255, 255, 255, .06);
+                border: 1px solid var(--aa-border);
+                color: #fff;
+                cursor: pointer;
+            }
+
+            .aa-mobile__menu {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: grid;
+                gap: 8px;
+            }
+
+            .aa-mobile__menu a,
+            .aa-mobile__dropbtn {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 12px 12px;
+                border-radius: 12px;
+                border: 1px solid rgba(255, 255, 255, .08);
+                background: rgba(255, 255, 255, .04);
+                color: var(--aa-text);
+                text-decoration: none;
+                font-weight: 700;
+                cursor: pointer;
+            }
+
+            .aa-mobile__dropcontent {
+                display: none;
+                padding: 8px 0 0;
+            }
+
+            .aa-mobile__dropcontent a {
+                font-weight: 600;
+                color: var(--aa-text-soft);
+                background: rgba(255, 255, 255, .03);
+            }
+
+            .aa-mobile__drop.is-open .aa-mobile__dropcontent {
+                display: grid;
+                gap: 8px;
+                padding-left: 10px;
+            }
+
+            .aa-mobile__cta {
+                margin-top: auto;
+            }
+
+            @media (max-width: 575px) {
+                .aa-header--sticky {
+                    top: 8px;
+                }
+
+                .aa-logo__img {
+                    height: 34px;
+                }
+            }
+
+            /* FORCE REMOVE WHITE HEADER BACKGROUND (ALL DEVICES) */
+            header,
+            header.transparent,
+            header.sticky,
+            header.header-light,
+            header.header-dark {
+                background: transparent !important;
+            }
+
+            /* Remove any mobile white background */
+            @media (max-width: 991px) {
+
+                header.aa-header,
+                header,
+                header.transparent,
+                header.sticky {
+                    background: transparent !important;
+                    position: fixed !important;
+                }
+
+                #content,
+                .no-top {
+                    padding-top: 0 !important;
+                    margin-top: 0 !important;
+                }
+            }
+
+            /* Make sure only inner glass container has background */
+            .aa-header {
+                background: transparent !important;
+            }
+
+            .aa-header__bar {
+                background: rgba(0, 0, 0, 0.65);
+            }
+
+            .clone,
+            header.clone,
+            .header-bg {
+                background: transparent !important;
+            }
+        </style>
+
+        <script>
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const header = document.querySelector(".aa-header");
+
+                window.addEventListener("scroll", function () {
+                    if (window.scrollY > 60) {
+                        header.classList.add("scrolled");
+                    } else {
+                        header.classList.remove("scrolled");
+                    }
+                });
+            });
+            document.addEventListener("DOMContentLoaded", function () {
+                const burger = document.querySelector(".aa-burger");
+                const mobile = document.getElementById("aaMobileNav");
+                const closeBtn = document.querySelector(".aa-mobile__close");
+
+                if (!burger || !mobile) return;
+
+                function openMenu() {
+                    mobile.classList.add("is-open");
+                    mobile.setAttribute("aria-hidden", "false");
+                    burger.setAttribute("aria-expanded", "true");
+                    document.body.style.overflow = "hidden";
+                }
+
+                function closeMenu() {
+                    mobile.classList.remove("is-open");
+                    mobile.setAttribute("aria-hidden", "true");
+                    burger.setAttribute("aria-expanded", "false");
+                    document.body.style.overflow = "";
+                }
+
+                burger.addEventListener("click", openMenu);
+                if (closeBtn) closeBtn.addEventListener("click", closeMenu);
+
+                mobile.addEventListener("click", function (e) {
+                    if (e.target === mobile) closeMenu();
+                });
+
+                // Mobile dropdowns
+                document.querySelectorAll(".aa-mobile__drop").forEach(function (wrap) {
+                    const btn = wrap.querySelector(".aa-mobile__dropbtn");
+                    if (!btn) return;
+
+                    btn.addEventListener("click", function () {
+                        const isOpen = wrap.classList.toggle("is-open");
+                        btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+                    });
+                });
+            });
+        </script>
         <!-- header close -->
 
         <div class="no-bottom no-top" id="content">

@@ -193,8 +193,8 @@
             color: #666;
         }
 
-        /* Feature Section */
-        .feature-section {
+        /* Categories Section */
+        .categories-section {
             background-color: #f8f9fa !important;
             padding: 80px 0;
         }
@@ -1021,22 +1021,6 @@
                     window.location.href = mailURL;
                 }
             </script>
-            <script>
-                const section = document.querySelector(".feature-section");
-
-                const observer = new IntersectionObserver(
-                    (entries) => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                section.classList.add("show");
-                            }
-                        });
-                    },
-                    { threshold: 0.3 }
-                );
-
-                observer.observe(section);
-            </script>
 
             <section class="no-top no-bottom" aria-label="Featured products">
                 <div class="container">
@@ -1294,7 +1278,7 @@
             </section>
 
             <!--Explore Our Fan Range start-->
-            <section class="feature-section">
+            <section class="categories-section">
                 <div class="container">
                     <div class="row mb-5">
                         <div class="col-lg-12 text-center">
@@ -2246,7 +2230,7 @@
                 <div class="container">
                     <div class="row">
                         <!-- Image -->
-                        <div class="col-lg-6 position-lg-absolute left-half h-100 overflow-hidden">
+                        <div class="col-lg-6 left-half h-100 overflow-hidden">
                             <div class="absolute start-0 w-100 abs-middle fs-36 text-white text-center z-2">
                                 <a class="player d-block hover popup-youtube no-border rounded-1 wow scaleIn"
                                     href="https://www.youtube.com/watch?v=uDsCSB7E3qE"><span></span></a>
