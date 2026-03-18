@@ -1,0 +1,91 @@
+/* BLDC Page Specific Styles - Actionaire */
+
+/* Fan Image */
+.bldc-fan-img {
+    max-height: 520px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 40px rgba(0, 0, 0, 0.5));
+    animation: floatFan 4s ease-in-out infinite;
+}
+
+@keyframes floatFan {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+}
+
+.bldc-launching-badge {
+    display: inline-block;
+    background-color: var(--primary-color, #c8102e);
+    color: #ffffff;
+    font-size: clamp(14px, 1.5vw, 18px);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: 4px;
+}
+
+/* Countdown Section */
+.countdown-label-top {
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.countdown-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.countdown-box {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 18px 28px;
+    text-align: center;
+    min-width: 100px;
+    backdrop-filter: blur(4px);
+}
+
+.countdown-number {
+    display: block;
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 900;
+    line-height: 1;
+    font-family: 'Arial Black', 'Arial', sans-serif;
+}
+
+.countdown-unit {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 6px;
+}
+
+.countdown-separator {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+/* Notify Form */
+@media (max-width: 576px) {
+    .countdown-box {
+        min-width: 70px;
+        padding: 14px 16px;
+    }
+    .notify-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .notify-input,
+    .notify-btn {
+        border-radius: 4px !important;
+        width: 100%;
+    }
+}

@@ -1,0 +1,46 @@
+/**
+ * color-customization.css
+ * Styles for the Color Customization page – swatch buttons and product preview.
+ */
+
+/* ── Color swatch buttons ───────────────────────────────────────── */
+.color-swatch-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+    padding: 0;
+    display: inline-block;
+}
+
+.color-swatch-btn:hover {
+    transform: scale(1.1);
+}
+
+.color-swatch-btn.active {
+    border-color: #E11D2E;
+    transform: scale(1.1);
+    box-shadow: 0 0 0 4px rgba(225, 29, 46, 0.20);
+}
+
+/* ── Product preview box ────────────────────────────────────────── */
+.product-preview-box {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-preview-box img {
+    max-height: 400px;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}

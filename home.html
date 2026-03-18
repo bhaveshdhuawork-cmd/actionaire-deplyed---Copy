@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>actionaire | Industrial Fans Made in India</title>
+    <title>ActionAire | Industrial Fans Made in India</title>
     <link rel="icon" href="images/icon.webp" type="image/webp" sizes="16x16">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -23,350 +23,18 @@
     <link href="css/coloring.css" rel="stylesheet" type="text/css">
     <!-- color scheme -->
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css">
+    <link href="css/global-ui.css" rel="stylesheet" type="text/css">
+    <link href="css/ui-elements.css" rel="stylesheet" type="text/css">
+    <link href="css/home-ui.css" rel="stylesheet" type="text/css">
 
-    <style>
-        /* Mobile Optimization for Hero Slider */
-        @media (max-width: 767px) {
-            .hero-ratio-section {
-                min-height: 80vh !important;
-                /* Increase height on mobile */
-                display: flex;
-                align-items: center;
-            }
-
-            .hero-bg {
-                object-fit: cover;
-                object-position: center;
-                transform: scale(1.4);
-                /* Zoom effect for mobile */
-            }
-
-            .hero-ratio-section h1 {
-                font-size: 32px !important;
-                line-height: 1.2 !important;
-            }
-        }
-
-        /* Desktop Optimization for Hero Slider */
-        @media (min-width: 992px) {
-            .hero-ratio-section h1 {
-                font-size: 72px !important;
-                /* Larger text for desktop */
-            }
-
-            .hero-ratio-section .btn-main {
-                margin-top: 30px !important;
-                /* Button appears lower */
-            }
-        }
-
-        /* Featured Products UI Improvements */
-        .owl-4-nomargin .item {
-            padding: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .owl-4-nomargin .item:hover {
-            transform: scale(1.02);
-            z-index: 2;
-        }
-
-        .product-display-card {
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            background: #111;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .product-display-card img {
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
-            display: block;
-            border-bottom: 3px solid #E11D2E;
-        }
-
-        .product-display-card .p-30 {
-            flex-grow: 1;
-            padding: 25px 20px !important;
-        }
-
-        .product-display-card h4 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            font-weight: 700;
-            color: #fff;
-        }
-
-        .product-display-card p {
-            font-size: 14px;
-            color: #aaa;
-            line-height: 1.6;
-        }
-
-        /* Enhanced Range Cards */
-        .range-card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 30px 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0, 0, 0, 0.02);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            height: 100%;
-            text-decoration: none;
-        }
-
-        .range-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .range-icon-wrap {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background: rgba(225, 29, 46, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .range-card:hover .range-icon-wrap {
-            background: #E11D2E;
-        }
-
-        .range-icon-wrap i {
-            color: #E11D2E;
-            transition: color 0.3s ease;
-        }
-
-        .range-card:hover .range-icon-wrap i {
-            color: #fff;
-        }
-
-        .range-card h5 {
-            font-weight: 700;
-            font-size: 15px;
-            margin: 0;
-            color: #111;
-        }
-
-        /* Team Card Styles */
-        .team-card {
-            background: #fff;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-
-        .team-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .team-card img {
-            border-radius: 8px;
-            object-fit: cover;
-            width: 100%;
-            aspect-ratio: 1/1;
-        }
-
-        .team-card h4 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 5px;
-            color: #111;
-        }
-
-        .team-card p {
-            font-size: 14px;
-            color: #666;
-        }
-
-        /* Categories Section */
-        .categories-section {
-            background-color: #f8f9fa !important;
-            padding: 80px 0;
-        }
-
-        /* Process Item Enhancement */
-        .process-item {
-            background: #fff;
-            border-radius: 16px;
-            padding: 40px 30px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            height: 100%;
-            border: 1px solid rgba(0, 0, 0, 0.03);
-            position: relative;
-            z-index: 1;
-        }
-
-        .process-item::after {
-            content: "";
-            border-radius: 16px;
-            position: absolute;
-            z-index: -1;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            box-shadow: 0 15px 40px rgba(225, 29, 46, 0.15);
-            opacity: 0;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-
-        .process-item:hover {
-            transform: translateY(-10px);
-        }
-
-        .process-item:hover::after {
-            opacity: 1;
-        }
-
-        .process-icon-wrap {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: rgba(225, 29, 46, 0.08);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 25px;
-            transition: all 0.3s ease;
-        }
-
-        .process-item:hover .process-icon-wrap {
-            background: #E11D2E;
-            transform: scale(1.1) rotate(5deg);
-        }
-
-        .process-icon {
-            font-size: 32px;
-            color: #E11D2E;
-            transition: all 0.3s ease;
-        }
-
-        .process-item:hover .process-icon {
-            color: #fff;
-        }
-
-        .process-title {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #111;
-        }
-
-        .process-desc {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Blog Card Extensions */
-        .bloglist {
-            background: #fff;
-            border-radius: 16px !important;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            height: 100%;
-            border: 1px solid rgba(0, 0, 0, 0.02);
-            position: relative;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .bloglist:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .bloglist .post-content {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .bloglist .post-image {
-            overflow: hidden;
-            position: relative;
-        }
-
-        .bloglist .post-image img {
-            transition: transform 0.5s ease;
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-        }
-
-        .bloglist:hover .post-image img {
-            transform: scale(1.05);
-        }
-
-        .bloglist .post-text {
-            padding: 30px !important;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .bloglist .post-text h4 {
-            margin-bottom: 15px;
-        }
-
-        .bloglist .post-text h4 a {
-            color: #111;
-            text-decoration: none;
-            transition: color 0.3s;
-            font-size: 20px;
-            font-weight: 700;
-            line-height: 1.4;
-        }
-
-        .bloglist .post-text h4 a:hover {
-            color: #E11D2E;
-        }
-
-        .bloglist .post-text p {
-            color: #666;
-            margin-bottom: 0;
-            line-height: 1.6;
-            flex-grow: 1;
-        }
-
-        /* Client Logo Improvements */
-        .client-logo {
-            filter: grayscale(100%) opacity(0.6);
-            transition: all 0.3s ease;
-            max-height: 80px;
-            object-fit: contain;
-        }
-
-        .client-logo:hover {
-            filter: grayscale(0%) opacity(1);
-            transform: scale(1.1);
-        }
-    </style>
-
+    <!-- Preload Critical Above-The-Fold Assets -->
+    <link rel="preload" as="image" href="images/background/2.webp" fetchpriority="high">
 </head>
 
 <body>
     <div id="wrapper">
 
-        <div class="scrollbar-v show-on-scroll"></div>
+
 
         <!-- page preloader begin -->
         <div id="de-loader">
@@ -377,7 +45,7 @@
         <!-- PROFESSIONAL GLASS BLACK HEADER (Desktop + Mobile fixed) -->
         <!-- FIXED HEADER: single logo only + mobile logo included -->
         <header class="aa-header">
-            <div class=" container">
+            <div class="container">
                 <div class="row">
                     <div class="col-12 py-2">
                         <div class="aa-header__bar">
@@ -415,9 +83,14 @@
                                             <li><a href="catalogs.html">Catalogs</a></li>
                                             <li><a href="datasheets.html">Datasheets</a></li>
                                             <li><a href="certifications.html">Certifications</a></li>
+                                            <li><a href="color-customization.html">Color Customization</a></li>
+
                                             <li><a href="faq.html">FAQ</a></li>
                                         </ul>
                                     </li>
+
+                                    <li><a class="aa-link" href="gallery.html">Gallery</a></li>
+
 
                                     <li><a class="aa-link" href="blog.html">Blog</a></li>
                                     <li><a class="aa-link" href="contact.html">Contact</a></li>
@@ -480,9 +153,14 @@
                                 <a href="catalogs.html">Catalogs</a>
                                 <a href="datasheets.html">Datasheets</a>
                                 <a href="certifications.html">Certifications</a>
+                                <a href="color-customization.html">Color Customization</a>
+
                                 <a href="faq.html">FAQ</a>
                             </div>
                         </li>
+
+
+
 
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
@@ -495,384 +173,7 @@
             </div>
         </header>
 
-        <style>
-            :root {
-                --aa-black: rgba(0, 0, 0, .72);
-                --aa-border: rgba(255, 255, 255, .10);
-                --aa-text: rgba(255, 255, 255, .92);
-                --aa-text-soft: rgba(255, 255, 255, .78);
-            }
 
-            /* Header wrapper */
-            .aa-header {
-                position: fixed;
-                top: 20px;
-                left: 0;
-                width: 100%;
-                z-index: 999;
-                background: transparent !important;
-                /* REMOVE full width bg */
-                transition: all .3s ease;
-            }
-
-            .aa-header--sticky {
-                position: fixed;
-                top: 12px;
-            }
-
-            /* Inner glass container only */
-            .aa-header__bar {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                gap: 18px;
-                padding: 10px 18px;
-                border-radius: 16px;
-                background: rgba(0, 0, 0, 0.65);
-                /* glass black */
-                border: 1px solid rgba(255, 255, 255, 0.08);
-                backdrop-filter: blur(14px);
-                -webkit-backdrop-filter: blur(14px);
-                transition: all .3s ease;
-            }
-
-            /* Scroll effect (NO FULL WIDTH BG) */
-            .aa-header.scrolled {
-                top: 10px;
-            }
-
-            .aa-header.scrolled .aa-header__bar {
-                background: rgba(0, 0, 0, 0.80);
-                border-color: rgba(255, 255, 255, 0.12);
-                box-shadow: 0 12px 30px rgba(0, 0, 0, .4);
-            }
-
-            /* SINGLE LOGO */
-            .aa-logo {
-                display: inline-flex;
-                align-items: center;
-            }
-
-            .aa-logo__img {
-                height: 40px;
-                width: auto;
-                display: block;
-            }
-
-            /* Desktop menu */
-            .aa-menu {
-                list-style: none;
-                display: flex;
-                align-items: center;
-                gap: 6px;
-                margin: 0;
-                padding: 0;
-            }
-
-            .aa-menu>li {
-                position: relative;
-            }
-
-            .aa-link {
-                display: inline-flex;
-                align-items: center;
-                padding: 10px 12px;
-                border-radius: 10px;
-                color: var(--aa-text);
-                text-decoration: none;
-                font-weight: 600;
-                font-size: 14px;
-                transition: .2s;
-            }
-
-            .aa-link:hover {
-                background: rgba(255, 255, 255, .06);
-                color: #fff;
-            }
-
-            /* Dropdown */
-            .aa-submenu {
-                position: absolute;
-                top: calc(100% + 10px);
-                left: 0;
-                min-width: 230px;
-                background: rgba(0, 0, 0, .85);
-                border: 1px solid var(--aa-border);
-                backdrop-filter: blur(14px);
-                -webkit-backdrop-filter: blur(14px);
-                border-radius: 14px;
-                padding: 10px;
-                list-style: none;
-                margin: 0;
-                opacity: 0;
-                visibility: hidden;
-                transform: translateY(8px);
-                transition: .2s;
-                box-shadow: 0 18px 40px rgba(0, 0, 0, .45);
-            }
-
-            .aa-submenu li a {
-                display: block;
-                padding: 10px 12px;
-                border-radius: 10px;
-                color: var(--aa-text-soft);
-                text-decoration: none;
-                font-weight: 600;
-                font-size: 13px;
-                transition: .2s;
-            }
-
-            .aa-submenu li a:hover {
-                background: rgba(255, 255, 255, .06);
-                color: #fff;
-            }
-
-            .aa-has-sub:hover .aa-submenu {
-                opacity: 1;
-                visibility: visible;
-                transform: translateY(0);
-            }
-
-            .aa-header__right {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-            }
-
-            /* Burger */
-            .aa-burger {
-                width: 44px;
-                height: 44px;
-                border-radius: 12px;
-                background: rgba(255, 255, 255, .06);
-                border: 1px solid var(--aa-border);
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                gap: 5px;
-                flex-direction: column;
-                cursor: pointer;
-            }
-
-            .aa-burger span {
-                width: 18px;
-                height: 2px;
-                background: rgba(255, 255, 255, .9);
-                display: block;
-            }
-
-            /* Mobile drawer */
-            .aa-mobile {
-                position: fixed;
-                inset: 0;
-                background: rgba(0, 0, 0, .55);
-                opacity: 0;
-                visibility: hidden;
-                transition: .2s;
-                z-index: 1000;
-            }
-
-            .aa-mobile.is-open {
-                opacity: 1;
-                visibility: visible;
-            }
-
-            .aa-mobile__panel {
-                position: absolute;
-                top: 0;
-                right: 0;
-                height: 100%;
-                width: min(92vw, 380px);
-                background: rgba(0, 0, 0, .92);
-                border-left: 1px solid var(--aa-border);
-                backdrop-filter: blur(14px);
-                -webkit-backdrop-filter: blur(14px);
-                transform: translateX(100%);
-                transition: .25s;
-                padding: 18px;
-                display: flex;
-                flex-direction: column;
-                gap: 14px;
-            }
-
-            .aa-mobile.is-open .aa-mobile__panel {
-                transform: translateX(0);
-            }
-
-            .aa-mobile__top {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                gap: 10px;
-            }
-
-            .aa-mobile__brand img {
-                height: 38px;
-                width: auto;
-                display: block;
-            }
-
-            .aa-mobile__close {
-                width: 44px;
-                height: 44px;
-                border-radius: 12px;
-                background: rgba(255, 255, 255, .06);
-                border: 1px solid var(--aa-border);
-                color: #fff;
-                cursor: pointer;
-            }
-
-            .aa-mobile__menu {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                display: grid;
-                gap: 8px;
-            }
-
-            .aa-mobile__menu a,
-            .aa-mobile__dropbtn {
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 12px 12px;
-                border-radius: 12px;
-                border: 1px solid rgba(255, 255, 255, .08);
-                background: rgba(255, 255, 255, .04);
-                color: var(--aa-text);
-                text-decoration: none;
-                font-weight: 700;
-                cursor: pointer;
-            }
-
-            .aa-mobile__dropcontent {
-                display: none;
-                padding: 8px 0 0;
-            }
-
-            .aa-mobile__dropcontent a {
-                font-weight: 600;
-                color: var(--aa-text-soft);
-                background: rgba(255, 255, 255, .03);
-            }
-
-            .aa-mobile__drop.is-open .aa-mobile__dropcontent {
-                display: grid;
-                gap: 8px;
-                padding-left: 10px;
-            }
-
-            .aa-mobile__cta {
-                margin-top: auto;
-            }
-
-            @media (max-width: 575px) {
-                .aa-header--sticky {
-                    top: 8px;
-                }
-
-                .aa-logo__img {
-                    height: 34px;
-                }
-            }
-
-            /* FORCE REMOVE WHITE HEADER BACKGROUND (ALL DEVICES) */
-            header,
-            header.transparent,
-            header.sticky,
-            header.header-light,
-            header.header-dark {
-                background: transparent !important;
-            }
-
-            /* Remove any mobile white background */
-            @media (max-width: 991px) {
-
-                header.aa-header,
-                header,
-                header.transparent,
-                header.sticky {
-                    background: transparent !important;
-                    position: fixed !important;
-                }
-
-                #content,
-                .no-top {
-                    padding-top: 0 !important;
-                    margin-top: 0 !important;
-                }
-            }
-
-            /* Make sure only inner glass container has background */
-            .aa-header {
-                background: transparent !important;
-            }
-
-            .aa-header__bar {
-                background: rgba(0, 0, 0, 0.65);
-            }
-
-            .clone,
-            header.clone,
-            .header-bg {
-                background: transparent !important;
-            }
-        </style>
-
-        <script>
-
-            document.addEventListener("DOMContentLoaded", function () {
-                const header = document.querySelector(".aa-header");
-
-                window.addEventListener("scroll", function () {
-                    if (window.scrollY > 60) {
-                        header.classList.add("scrolled");
-                    } else {
-                        header.classList.remove("scrolled");
-                    }
-                });
-            });
-            document.addEventListener("DOMContentLoaded", function () {
-                const burger = document.querySelector(".aa-burger");
-                const mobile = document.getElementById("aaMobileNav");
-                const closeBtn = document.querySelector(".aa-mobile__close");
-
-                if (!burger || !mobile) return;
-
-                function openMenu() {
-                    mobile.classList.add("is-open");
-                    mobile.setAttribute("aria-hidden", "false");
-                    burger.setAttribute("aria-expanded", "true");
-                    document.body.style.overflow = "hidden";
-                }
-
-                function closeMenu() {
-                    mobile.classList.remove("is-open");
-                    mobile.setAttribute("aria-hidden", "true");
-                    burger.setAttribute("aria-expanded", "false");
-                    document.body.style.overflow = "";
-                }
-
-                burger.addEventListener("click", openMenu);
-                if (closeBtn) closeBtn.addEventListener("click", closeMenu);
-
-                mobile.addEventListener("click", function (e) {
-                    if (e.target === mobile) closeMenu();
-                });
-
-                // Mobile dropdowns
-                document.querySelectorAll(".aa-mobile__drop").forEach(function (wrap) {
-                    const btn = wrap.querySelector(".aa-mobile__dropbtn");
-                    if (!btn) return;
-
-                    btn.addEventListener("click", function () {
-                        const isOpen = wrap.classList.toggle("is-open");
-                        btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
-                    });
-                });
-            });
-        </script>
         <!-- header close -->
 
 
@@ -996,35 +297,8 @@
                     </div>
                 </div>
             </section>
-            <script>
-                function sendEnquiry() {
 
-                    var name = document.getElementById("name").value;
-                    var email = document.getElementById("email").value;
-                    var message = document.getElementById("message").value;
-
-                    if (name === "" || email === "" || message === "") {
-                        alert("Please fill all fields");
-                        return;
-                    }
-
-                    var text = "New Fan Customization Enquiry:%0A%0A"
-                        + "Name: " + name + "%0A"
-                        + "Email: " + email + "%0A"
-                        + "Requirement: " + message;
-                    /* ===== WHATSAPP ===== */
-                    var whatsappURL = "https://wa.me/6351437492?text=" + text;
-                    /* ===== EMAIL ===== */
-                    var mailURL = "mailto:YOUR@email.com"
-                        + "?subject=Fan Customization Enquiry"
-                        + "&body=" + text;
-                    /* Open both */
-                    window.open(whatsappURL, "_blank");
-                    window.location.href = mailURL;
-                }
-            </script>
-
-            <section class="no-top no-bottom" aria-label="Featured products">
+            <section class="no-top" aria-label="Featured products">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 text-center">
@@ -1040,15 +314,11 @@
                             <a href="axial-flow.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
-                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
-                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
-                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
-                                        </div>
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
-                                        <img src="images/products/axial flow.jpg" class="img-fluid hover-scale-1-1"
-                                            alt="axial flow">
+                                        <img loading="lazy" src="images/products/axial flow.jpg"
+                                            class="img-fluid hover-scale-1-1" alt="axial flow">
                                         <div class="de-overlay-gradient-dark op-5 h-50 top-50"></div>
                                     </div>
                                     <div class="p-30">
@@ -1065,14 +335,11 @@
                             <a href="commercial-wall-fan.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
-                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
-                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
-                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
-                                        </div>
+
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
-                                        <img src="images/products/commercial air circulator wall fan.jpg"
+                                        <img loading="lazy" src="images/products/commercial air circulator wall fan.jpg"
                                             class="img-fluid hover-scale-1-1" alt="commercial air circulator wall fan">
                                         <div class="de-overlay-gradient-dark op-5 h-50 top-50"></div>
                                     </div>
@@ -1089,14 +356,11 @@
                             <a href="commercial-pedestal-fan.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
-                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
-                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
-                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
-                                        </div>
+
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
-                                        <img src="images/products/commercial air circulator.jpg"
+                                        <img loading="lazy" src="images/products/commercial air circulator.jpg"
                                             class="img-fluid hover-scale-1-1" alt="commercial air circulator">
                                         <div class="de-overlay-gradient-dark op-5 h-50 top-50"></div>
                                     </div>
@@ -1113,15 +377,12 @@
                             <a href="floor-fans.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
-                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
-                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
-                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
-                                        </div>
+
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
-                                        <img src="images/products/floor fan.jpg" class="img-fluid hover-scale-1-1"
-                                            alt="floor fan">
+                                        <img loading="lazy" src="images/products/floor fan.jpg"
+                                            class="img-fluid hover-scale-1-1" alt="floor fan">
                                         <div class="de-overlay-gradient-dark op-5 h-50 top-50"></div>
                                     </div>
                                     <div class="p-30">
@@ -1137,15 +398,12 @@
                             <a href="hanging-drum.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
-                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
-                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
-                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
-                                        </div>
+
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
-                                        <img src="images/products/hanging drum.jpg" class="img-fluid hover-scale-1-1"
-                                            alt="hanging drum">
+                                        <img loading="lazy" src="images/products/hanging drum.jpg"
+                                            class="img-fluid hover-scale-1-1" alt="hanging drum">
                                         <div class="de-overlay-gradient-dark op-5 h-50 top-50"></div>
                                     </div>
                                     <div class="p-30">
@@ -1161,15 +419,11 @@
                             <a href="heavy-duty-pedestal-fan.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
-                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
-                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
-                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
-                                        </div>
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
-                                        <img src="images/products/heavy duty.jpg" class="img-fluid hover-scale-1-1"
-                                            alt="heavy duty pedestal fan">
+                                        <img loading="lazy" src="images/products/heavy duty.jpg"
+                                            class="img-fluid hover-scale-1-1" alt="heavy duty pedestal fan">
                                         <div class="de-overlay-gradient-dark op-5 h-50 top-50"></div>
                                     </div>
                                     <div class="p-30">
@@ -1185,14 +439,10 @@
                             <a href="heavy-duty-wall-fan.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
-                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
-                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
-                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
-                                        </div>
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
-                                        <img src="images/products/heavy duty wall fan.jpg"
+                                        <img loading="lazy" src="images/products/heavy duty wall fan.jpg"
                                             class="img-fluid hover-scale-1-1" alt="heavy duty wall fan">
                                         <div class="de-overlay-gradient-dark op-5 h-50 top-50"></div>
                                     </div>
@@ -1209,15 +459,12 @@
                             <a href="man-cooler.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
-                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
-                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
-                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
-                                        </div>
+
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
-                                        <img src="images/products/man cooler.jpg" class="img-fluid hover-scale-1-1"
-                                            alt="man cooler">
+                                        <img loading="lazy" src="images/products/man cooler.jpg"
+                                            class="img-fluid hover-scale-1-1" alt="man cooler">
                                         <div class="de-overlay-gradient-dark op-5 h-50 top-50"></div>
                                     </div>
                                     <div class="p-30">
@@ -1230,18 +477,15 @@
 
                         <!-- 11 -->
                         <div class="item">
-                            <a href="heavy-duty-exhaust.html" class="d-block">
+                            <a href="portable-blower.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
-                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
-                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
-                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
-                                        </div>
+
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
-                                        <img src="images/products/portable blower.jpg" class="img-fluid hover-scale-1-1"
-                                            alt="portable blower">
+                                        <img loading="lazy" src="images/products/portable blower.jpg"
+                                            class="img-fluid hover-scale-1-1" alt="portable blower">
                                         <div class="de-overlay-gradient-dark op-5 h-50 top-50"></div>
                                     </div>
                                     <div class="p-30">
@@ -1254,23 +498,20 @@
 
                         <!-- 12 -->
                         <div class="item">
-                            <a href="water-shield-drum.html" class="d-block">
+                            <a href="portable-heavy-floor-fan.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
-                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
-                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
-                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
-                                        </div>
+
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
-                                        <img src="images/products/portable drum type.jpg"
+                                        <img loading="lazy" src="images/products/portable drum type.jpg"
                                             class="img-fluid hover-scale-1-1" alt="portable drum type">
                                         <div class="de-overlay-gradient-dark op-5 h-50 top-50"></div>
                                     </div>
                                     <div class="p-30">
-                                        <h4>Portable drum type</h4>
-                                        <p class="mb-0">Portable drum fan with strong airflow coverage.</p>
+                                        <h4>Portable heavy floor fan</h4>
+                                        <p class="mb-0">Portable heavy floor fan with strong airflow coverage.</p>
                                     </div>
                                 </div>
                             </a>
@@ -1281,14 +522,11 @@
                             <a href="portable-air-circulators.html" class="d-block">
                                 <div class="product-display-card text-light overflow-hidden">
                                     <div class="relative overflow-hidden">
-                                        <div class="abs top-10 end-10 z-2 bg-gradient text-white px-3 py-1 fs-12 fw-bold shadow-sm"
-                                            style="border-radius: 4px; background: linear-gradient(45deg, #E11D2E, #ff4d4d);">
-                                            <i class="fa fa-bolt me-1"></i> HIGH CFM
-                                        </div>
+
                                         <p
                                             class="d-inline bg-color abs abs-center px-3 py-1 rounded-1 text-center bottom-10 z-1000 text-white mb-0 fs-12 fw-bold text-uppercase">
                                             View Product</p>
-                                        <img src="images/products/portable stand type.jpg"
+                                        <img loading="lazy" src="images/products/portable stand type.jpg"
                                             class="img-fluid hover-scale-1-1" alt="portable stand type">
                                         <div class="de-overlay-gradient-dark op-5 h-50 top-50"></div>
                                     </div>
@@ -1305,6 +543,32 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Color Customization Section -->
+            <section class="section-dark bg-dark text-light py-5 border-bottom border-secondary">
+                <div class="container">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <div class="subtitle s2 mb-2">New Feature</div>
+                            <h2 class="mb-2">Color Customization</h2>
+                            <p class="text-white-50 mb-4">Pick from 11 vibrant finishes to fit your industrial spaces or
+                                brand identity perfectly.</p>
+                            <a href="color-customization.html" class="btn-main">Customize Now <i
+                                    class="fa fa-arrow-right ms-2"></i></a>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="product-display-card text-light overflow-hidden bg-transparent border-0">
+                                <div class="relative overflow-hidden text-center">
+                                    <img id="promoFanImg" src="images/product color/RED front.png"
+                                        class="img-fluid hover-scale-1-1" style="max-height: 350px;"
+                                        alt="Customizable Fan">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
             <!--Explore Our Fan Range start-->
             <section class="categories-section">
@@ -1330,7 +594,7 @@
                                 <div class="range-icon-wrap">
                                     <i class="fa fa-wind fa-2x"></i>
                                 </div>
-                                <h5 class="text-center">Commercial Wall Fan</h5>
+                                <h5 class="text-center">Commercial Duty Wall Fan</h5>
                             </a>
                         </div>
 
@@ -1366,286 +630,8 @@
                 </div>
             </section>
             <!--Explore Our Fan Range end-->
-            <!-- Fan Zoom Scroll Showcase (Canvas + 3 text blocks that change on scroll) -->
-            <!-- ================================================
-     FAN SCROLL SHOWCASE
-================================================ -->
-            <!-- ================================================
-     COPY-PASTE THIS ENTIRE BLOCK INTO YOUR PAGE
-     Fan Scroll Showcase — White BG, Black Fan
-================================================ -->
 
-            <!-- ── STYLES ── -->
-            <!-- ================================================
-     COPY-PASTE THIS ENTIRE BLOCK INTO YOUR PAGE
-     Fan Scroll Showcase — White BG, Black Fan
-     Desktop: Fan LEFT  |  Text RIGHT
-     Mobile:  Fan centered, text bottom
-================================================ -->
-
-            <!-- ── STYLES ── -->
-            <style>
-                /* ================================================
-     FAN SCROLL SHOWCASE — WHITE BACKGROUND
-  ================================================ */
-
-                .fan-showcase {
-                    position: relative;
-                    height: 350vh;
-                    background: #ffffff;
-                }
-
-                .fan-showcase__sticky {
-                    position: sticky;
-                    top: 120px;
-                    height: calc(100vh - 120px);
-                    overflow: hidden;
-                    display: flex;
-                    align-items: center;
-                }
-
-                /* Canvas fills the full sticky area */
-                .fan-showcase__canvas {
-                    position: absolute;
-                    inset: 0;
-                    width: 100%;
-                    height: 100%;
-                    display: block;
-                }
-
-                /* Overlay — hidden on desktop, subtle white fade on mobile */
-                .fan-showcase__overlay {
-                    display: none;
-                    position: absolute;
-                    inset: 0;
-                    pointer-events: none;
-                }
-
-                /* Content panel sits above canvas */
-                .fan-showcase__content {
-                    position: relative;
-                    z-index: 2;
-                    width: 100%;
-                    pointer-events: none;
-                }
-
-                /* ── Text Blocks ── */
-                .fan-showcase__texts {
-                    position: relative;
-                    min-height: 240px;
-                }
-
-                .fan-showcase__text {
-                    display: none;
-                    opacity: 0;
-                    transform: translateY(14px);
-                }
-
-                .fan-showcase__text.is-active {
-                    display: block;
-                    animation: fanTextIn 0.45s ease forwards;
-                }
-
-                @keyframes fanTextIn {
-                    from {
-                        opacity: 0;
-                        transform: translateY(14px);
-                    }
-
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-
-                /* Kicker */
-                .fan-showcase__kicker {
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 10px;
-                    font-family: 'Barlow Condensed', sans-serif;
-                    font-size: 11px;
-                    font-weight: 800;
-                    letter-spacing: 0.24em;
-                    text-transform: uppercase;
-                    color: #E11D2E;
-                    margin-bottom: 16px;
-                }
-
-                .fan-showcase__kicker::before {
-                    content: '';
-                    display: block;
-                    width: 24px;
-                    height: 2px;
-                    background: #E11D2E;
-                    flex-shrink: 0;
-                }
-
-                /* Heading */
-                .fan-showcase__heading {
-                    font-family: 'Barlow Condensed', sans-serif;
-                    font-size: clamp(28px, 3.8vw, 52px);
-                    font-weight: 900;
-                    line-height: 1.05;
-                    letter-spacing: 0.02em;
-                    text-transform: uppercase;
-                    color: #0a0a0a;
-                    margin-bottom: 20px;
-                }
-
-                /* Description */
-                .fan-showcase__desc {
-                    font-family: 'Barlow', sans-serif;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 1.8;
-                    letter-spacing: 0.04em;
-                    text-transform: uppercase;
-                    color: rgba(0, 0, 0, 0.52);
-                    max-width: 400px;
-                    margin: 0;
-                }
-
-                /* ── Progress Dots ── */
-                .fan-showcase__dots {
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    margin-top: 32px;
-                }
-
-                .fan-showcase__dot {
-                    width: 8px;
-                    height: 8px;
-                    border-radius: 50%;
-                    background: rgba(0, 0, 0, 0.12);
-                    border: 1px solid rgba(0, 0, 0, 0.10);
-                    transition: all 0.35s ease;
-                }
-
-                .fan-showcase__dot.is-active {
-                    width: 28px;
-                    border-radius: 4px;
-                    background: #E11D2E;
-                    border-color: #E11D2E;
-                }
-
-                /* ── Step Counter ── */
-                .fan-showcase__counter {
-                    display: flex;
-                    align-items: baseline;
-                    gap: 4px;
-                    margin-top: 16px;
-                    font-family: 'Barlow Condensed', sans-serif;
-                    font-size: 12px;
-                    font-weight: 700;
-                    letter-spacing: 0.1em;
-                }
-
-                .fan-showcase__counter-current {
-                    font-size: 20px;
-                    font-weight: 900;
-                    color: #0a0a0a;
-                    line-height: 1;
-                }
-
-                .fan-showcase__counter-sep {
-                    color: rgba(0, 0, 0, 0.25);
-                    margin: 0 2px;
-                }
-
-                .fan-showcase__counter-total {
-                    color: rgba(0, 0, 0, 0.35);
-                }
-
-                /* ── Scroll Hint ── */
-                .fan-showcase__scroll-hint {
-                    position: absolute;
-                    bottom: 36px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 10px;
-                    z-index: 3;
-                    transition: opacity 0.5s ease;
-                }
-
-                .fan-showcase__scroll-hint.hidden {
-                    opacity: 0;
-                    pointer-events: none;
-                }
-
-                .fan-showcase__scroll-line {
-                    display: block;
-                    width: 1px;
-                    height: 48px;
-                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-                    animation: scrollPulse 1.8s ease-in-out infinite;
-                }
-
-                @keyframes scrollPulse {
-
-                    0%,
-                    100% {
-                        opacity: 0.3;
-                        transform: scaleY(0.8);
-                    }
-
-                    50% {
-                        opacity: 1.0;
-                        transform: scaleY(1.0);
-                    }
-                }
-
-                .fan-showcase__scroll-label {
-                    font-family: 'Barlow Condensed', sans-serif;
-                    font-size: 10px;
-                    font-weight: 700;
-                    letter-spacing: 0.22em;
-                    text-transform: uppercase;
-                    color: rgba(0, 0, 0, 0.38);
-                }
-
-                /* ================================================
-     RESPONSIVE
-  ================================================ */
-                @media (max-width: 991px) {
-                    .fan-showcase__overlay {
-                        display: block;
-                    }
-
-                    .fan-showcase__sticky {
-                        align-items: flex-end;
-                    }
-
-                    .fan-showcase__content {
-                        padding-bottom: 80px;
-                    }
-                }
-
-                @media (max-width: 767px) {
-                    .fan-showcase {
-                        height: 300vh;
-                    }
-
-                    .fan-showcase__heading {
-                        font-size: 26px;
-                    }
-
-                    .fan-showcase__desc {
-                        font-size: 13px;
-                    }
-
-                    .fan-showcase__texts {
-                        min-height: 200px;
-                    }
-                }
-            </style>
-
-
-            <!-- ── HTML ── -->
+            <!-- Fan Engineering Showcase – scroll-sequence section -->
             <section class="fan-showcase" id="fanShowcase" aria-label="Fan engineering showcase">
                 <div class="fan-showcase__sticky">
 
@@ -1662,7 +648,6 @@
                                 <div class="col-12">
                                     <div id="fanShowcaseTexts">
                                         <div class="fan-showcase__text is-active"></div>
-
                                     </div>
                                     <!-- /fan-showcase__texts -->
 
@@ -1694,183 +679,112 @@
 
                 </div>
             </section>
-            <!-- ── JAVASCRIPT ── -->
-            <script>
-                (function () {
-                    'use strict';
+            <!-- Fan showcase logic handled by js/fan-showcase.js -->
 
-                    /* ── Element references ── */
-                    const section = document.getElementById('fanShowcase');
-                    const canvas = document.getElementById('fanShowcaseCanvas');
-                    const textsWrap = document.getElementById('fanShowcaseTexts');
-                    const scrollHint = document.getElementById('fanScrollHint');
-                    if (!section || !canvas) return;
+            <!-- Certification Section Start -->
+            <section>
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="subtitle wow fadeInUp mb-3">Quality Assurance</div>
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s">Certifications</h2>
+                        <div class="spacer-single"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="client-showcase">
+                        <div class="cert-track">
+                            <!-- SET 1 -->
+                            <div class="cert-item">
+                                <a href="certifications.html"
+                                    class="bg-grey p-30 rounded-1 text-center h-100 d-block text-decoration-none">
+                                    <i class="fa fa-certificate fa-3x mb-3 id-color"></i>
+                                    <h6 class="mb-0">ISO 9001:2015</h6>
+                                </a>
+                            </div>
+                            <div class="cert-item">
+                                <a href="certifications.html"
+                                    class="bg-grey p-30 rounded-1 text-center h-100 d-block text-decoration-none">
+                                    <i class="fa fa-check-circle fa-3x mb-3 id-color"></i>
+                                    <h6 class="mb-0">UL Certified</h6>
+                                </a>
+                            </div>
+                            <div class="cert-item">
+                                <a href="certifications.html"
+                                    class="bg-grey p-30 rounded-1 text-center h-100 d-block text-decoration-none">
+                                    <i class="fa fa-shield fa-3x mb-3 id-color"></i>
+                                    <h6 class="mb-0">TUV Rheinland</h6>
+                                </a>
+                            </div>
+                            <div class="cert-item">
+                                <a href="certifications.html"
+                                    class="bg-grey p-30 rounded-1 text-center h-100 d-block text-decoration-none">
+                                    <i class="fa fa-check-square-o fa-3x mb-3 id-color"></i>
+                                    <h6 class="mb-0">MSME Registered</h6>
+                                </a>
+                            </div>
+                            <div class="cert-item">
+                                <a href="certifications.html"
+                                    class="bg-grey p-30 rounded-1 text-center h-100 d-block text-decoration-none">
+                                    <i class="fa fa-bolt fa-3x mb-3 id-color"></i>
+                                    <h6 class="mb-0">CPRI Tested</h6>
+                                </a>
+                            </div>
+                            <div class="cert-item">
+                                <a href="certifications.html"
+                                    class="bg-grey p-30 rounded-1 text-center h-100 d-block text-decoration-none">
+                                    <i class="fa fa-industry fa-3x mb-3 id-color"></i>
+                                    <h6 class="mb-0">NSIC Registered</h6>
+                                </a>
+                            </div>
 
-                    const ctx = canvas.getContext('2d');
-                    const textBlocks = textsWrap ? Array.from(textsWrap.querySelectorAll('.fan-showcase__text')) : [];
-                    const dots = Array.from(section.querySelectorAll('.fan-showcase__dot'));
-                    const counterCurrent = section.querySelector('.fan-showcase__counter-current');
-
-                    /* ── Config ── */
-                    const CONFIG = {
-                        folder: 'images/seq-test',
-                        startFrame: 10231,
-                        frameCount: 80, // Total frames from 10231 to 10310 is 80
-                        animPortion: 0.8    /* Animation completes over 80% of scroll for smoother transition */
-                    };
-
-                    /* ── State ── */
-                    const images = new Array(CONFIG.frameCount);
-                    let lastGood = 0;
-                    let ticking = false;
-                    let hintHidden = false;
-                    let targetFrame = 0;
-
-                    /* ── Helpers ── */
-                    const clamp = (v, min, max) => Math.min(max, Math.max(min, v));
-
-                    function frameSrc(i) {
-                        return `${CONFIG.folder}/f3_s${CONFIG.startFrame + i}.webp`;
-                    }
-
-                    /* ── Canvas sizing ── */
-                    function resizeCanvas() {
-                        const dpr = Math.max(1, window.devicePixelRatio || 1);
-                        const rect = canvas.getBoundingClientRect();
-                        canvas.width = Math.floor(rect.width * dpr);
-                        canvas.height = Math.floor(rect.height * dpr);
-                        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-                    }
-
-                    /* ── Image crop preset ── */
-                    function getCropPreset() {
-                        const isMobile = window.matchMedia('(max-width: 768px)').matches;
-                        return isMobile
-                            ? { mode: 'contain', zoom: 0.95, panX: 0.50, panY: 0.35 }
-                            : { mode: 'contain', zoom: 0.85, panX: 0.50, panY: 0.50 };
-                        /* desktop: panX 0.15 = fan locked to LEFT side, zoom 0.65 reduces size to prevent overlap */
-                    }
-
-                    /* ── Draw a single frame ── */
-                    function drawFrame(index) {
-                        index = clamp(index, 0, CONFIG.frameCount - 1);
-
-                        const img = images[index];
-                        const isReady = img && img.complete && img.naturalWidth > 0;
-                        const fallback = images[lastGood];
-                        const hasFallback = fallback && fallback.complete && fallback.naturalWidth > 0;
-                        const src = isReady ? img : hasFallback ? fallback : null;
-
-                        if (!src) return;
-                        if (isReady) lastGood = index;
-
-                        const cw = canvas.clientWidth;
-                        const ch = canvas.clientHeight;
-                        const iw = src.naturalWidth;
-                        const ih = src.naturalHeight;
-
-                        const { mode, zoom, panX, panY } = getCropPreset();
-
-                        const base = mode === 'contain'
-                            ? Math.min(cw / iw, ch / ih)
-                            : Math.max(cw / iw, ch / ih);
-
-                        const scale = base * zoom;
-                        const w = iw * scale;
-                        const h = ih * scale;
-
-                        ctx.clearRect(0, 0, cw, ch);
-                        ctx.drawImage(src, (cw - w) * panX, (ch - h) * panY, w, h);
-                    }
-
-                    /* ── Scroll progress 0 → 1 ── */
-                    function getScrollProgress() {
-                        const rect = section.getBoundingClientRect();
-                        const vh = window.innerHeight;
-                        if (rect.top >= vh) return 0;
-                        if (rect.bottom <= 0) return 1;
-                        const total = section.offsetHeight - vh;
-                        const scrolled = clamp(-rect.top, 0, total);
-                        return total > 0 ? scrolled / total : 0;
-                    }
-
-                    /* ── Map progress to step 0 / 1 / 2 ── */
-                    function stepFromProgress(p) {
-                        if (p < 0.34) return 0;
-                        if (p < 0.67) return 1;
-                        return 2;
-                    }
-
-                    /* ── Activate the correct step ── */
-                    function setActiveStep(step) {
-                        textBlocks.forEach((el, i) => el.classList.toggle('is-active', i === step));
-                        dots.forEach((d, i) => d.classList.toggle('is-active', i === step));
-                        if (counterCurrent) {
-                            counterCurrent.textContent = String(step + 1).padStart(2, '0');
-                        }
-                    }
-
-                    /* ── Hide scroll hint after first scroll ── */
-                    function hideScrollHint() {
-                        if (hintHidden || !scrollHint) return;
-                        hintHidden = true;
-                        scrollHint.classList.add('hidden');
-                    }
-
-                    /* ── Master update on every scroll tick ── */
-                    function update() {
-                        const p = getScrollProgress();
-                        const animP = clamp(p / CONFIG.animPortion, 0, 1);
-                        
-                        // Linear mapping for direct scroll-to-frame sync
-                        targetFrame = Math.round(animP * (CONFIG.frameCount - 1));
-
-                        drawFrame(targetFrame);
-
-                        if (p > 0.02) hideScrollHint();
-                    }
-
-                    /* ── Preload all frame images ── */
-                    function preload() {
-                        for (let i = 0; i < CONFIG.frameCount; i++) {
-                            const im = new Image();
-                            im.src = frameSrc(i);
-                            images[i] = im;
-
-                            if (i === 0) {
-                                im.onload = function () {
-                                    resizeCanvas();
-                                    drawFrame(0);
-                                    update();
-                                };
-                            }
-                        }
-                    }
-
-                    /* ── Event listeners ── */
-                    window.addEventListener('scroll', function () {
-                        if (ticking) return;
-                        ticking = true;
-                        requestAnimationFrame(function () {
-                            update();
-                            ticking = false;
-                        });
-                    }, { passive: true });
-
-                    window.addEventListener('resize', function () {
-                        resizeCanvas();
-                        update();
-                    });
-
-                    /* ── Init ── */
-                    resizeCanvas();
-                    preload();
-                    drawFrame(0);
-                    setActiveStep(0);
-
-                })();
-            </script>
-            <!--the on scroll showcasescript start-->
+                            <!-- SET 2 (Duplicate for infinite seamless loop) -->
+                            <div class="cert-item">
+                                <a href="certifications.html"
+                                    class="bg-grey p-30 rounded-1 text-center h-100 d-block text-decoration-none">
+                                    <i class="fa fa-certificate fa-3x mb-3 id-color"></i>
+                                    <h6 class="mb-0">ISO 9001:2015</h6>
+                                </a>
+                            </div>
+                            <div class="cert-item">
+                                <a href="certifications.html"
+                                    class="bg-grey p-30 rounded-1 text-center h-100 d-block text-decoration-none">
+                                    <i class="fa fa-check-circle fa-3x mb-3 id-color"></i>
+                                    <h6 class="mb-0">UL Certified</h6>
+                                </a>
+                            </div>
+                            <div class="cert-item">
+                                <a href="certifications.html"
+                                    class="bg-grey p-30 rounded-1 text-center h-100 d-block text-decoration-none">
+                                    <i class="fa fa-shield fa-3x mb-3 id-color"></i>
+                                    <h6 class="mb-0">TUV Rheinland</h6>
+                                </a>
+                            </div>
+                            <div class="cert-item">
+                                <a href="certifications.html"
+                                    class="bg-grey p-30 rounded-1 text-center h-100 d-block text-decoration-none">
+                                    <i class="fa fa-check-square-o fa-3x mb-3 id-color"></i>
+                                    <h6 class="mb-0">MSME Registered</h6>
+                                </a>
+                            </div>
+                            <div class="cert-item">
+                                <a href="certifications.html"
+                                    class="bg-grey p-30 rounded-1 text-center h-100 d-block text-decoration-none">
+                                    <i class="fa fa-bolt fa-3x mb-3 id-color"></i>
+                                    <h6 class="mb-0">CPRI Tested</h6>
+                                </a>
+                            </div>
+                            <div class="cert-item">
+                                <a href="certifications.html"
+                                    class="bg-grey p-30 rounded-1 text-center h-100 d-block text-decoration-none">
+                                    <i class="fa fa-industry fa-3x mb-3 id-color"></i>
+                                    <h6 class="mb-0">NSIC Registered</h6>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Certification Section End -->
 
             <!--product showcase start-->
 
@@ -1893,7 +807,7 @@
                                 </div>
 
                                 <!-- Replace with factory/production image -->
-                                <img src="images/about/about.webp" class="img-fluid wow scaleIn"
+                                <img loading="lazy" src="images/about/about.webp" class="img-fluid wow scaleIn"
                                     alt="Industrial Fan Manufacturing">
                             </div>
                         </div>
@@ -1914,7 +828,7 @@
                                 </p>
 
                                 <p class="wow fadeInUp" data-wow-delay=".2s">
-                                    We didn’t become a leader in industrial and exhaust fans by settling for average.
+                                    We didnâ€™t become a leader in industrial and exhaust fans by settling for average.
                                     For over 30 years, Action Aire has been pushing the limits and stands at the
                                     forefront with powerful industrial fans (weatherproof air circulator fans, floor air
                                     circulator fans, and portable air circulator fans) and exhaust fans (heavy duty
@@ -1922,7 +836,7 @@
                                     <br><br>
                                     We handle everything for you from consultation, design and production to delivery
                                     and support. You just need to connect with us and we will get you the most effective
-                                    & high-power cooling systems. Our goal is simple and powerful – to make
+                                    & high-power cooling systems. Our goal is simple and powerful â€“ to make
                                     high-quality, reliable fans that keep your spaces cool and comfortable.
                                 </p>
 
@@ -1954,7 +868,7 @@
                         <!-- Arvind Khandelwal -->
                         <div class="col-lg-1-5 col-md-6 wow fadeInUp" data-wow-delay=".0s">
                             <div class="text-center team-card">
-                                <img src="images/team/arvind-1.webp" class="img-fluid rounded-1 mb-3"
+                                <img loading="lazy" src="images/team/arvind-1.webp" class="img-fluid rounded-1 mb-3"
                                     alt="Arvind Khandelwal">
                                 <h4>Arvind Khandelwal</h4>
                                 <p class="mb-0">Managing Director</p>
@@ -1964,7 +878,7 @@
                         <!-- Akshay Khandelwal -->
                         <div class="col-lg-1-5 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                             <div class="text-center team-card">
-                                <img src="images/team/akshay.webp" class="img-fluid rounded-1 mb-3"
+                                <img loading="lazy" src="images/team/akshay.webp" class="img-fluid rounded-1 mb-3"
                                     alt="Akshay Khandelwal">
                                 <h4>Akshay Khandelwal</h4>
                                 <p class="mb-0">Chief Operating Officer</p>
@@ -1974,7 +888,7 @@
                         <!-- Sanjay Malhotra -->
                         <div class="col-lg-1-5 col-md-6 wow fadeInUp" data-wow-delay=".4s">
                             <div class="text-center team-card">
-                                <img src="images/team/sanjay.webp" class="img-fluid rounded-1 mb-3"
+                                <img loading="lazy" src="images/team/sanjay.webp" class="img-fluid rounded-1 mb-3"
                                     alt="Sanjay Malhotra">
                                 <h4>Sanjay Malhotra</h4>
                                 <p class="mb-0">GM, Action Aire</p>
@@ -1984,7 +898,8 @@
                         <!-- Sunil Pandita -->
                         <div class="col-lg-1-5 col-md-6 wow fadeInUp" data-wow-delay=".6s">
                             <div class="text-center team-card">
-                                <img src="images/team/sunil.webp" class="img-fluid rounded-1 mb-3" alt="Sunil Pandita">
+                                <img loading="lazy" src="images/team/sunil.webp" class="img-fluid rounded-1 mb-3"
+                                    alt="Sunil Pandita">
                                 <h4>Sunil Pandita</h4>
                                 <p class="mb-0">Manager, Exports</p>
                             </div>
@@ -1993,7 +908,8 @@
                         <!-- Sumit Sharma -->
                         <div class="col-lg-1-5 col-md-6 wow fadeInUp" data-wow-delay=".8s">
                             <div class="text-center team-card">
-                                <img src="images/team/sumit.webp" class="img-fluid rounded-1 mb-3" alt="Sumit Sharma">
+                                <img loading="lazy" src="images/team/sumit.webp" class="img-fluid rounded-1 mb-3"
+                                    alt="Sumit Sharma">
                                 <h4>Sumit Sharma</h4>
                                 <p class="mb-0">AGM Sales, Action Aire</p>
                             </div>
@@ -2120,138 +1036,11 @@
         </div>
         </section>
 
-        <script>
-            (function () {
-                var items = document.querySelectorAll(".js-reveal");
-
-                if (!("IntersectionObserver" in window)) {
-                    items.forEach(function (el) { el.classList.add("is-visible"); });
-                    return;
-                }
-
-                var observer = new IntersectionObserver(function (entries) {
-                    entries.forEach(function (entry) {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add("is-visible");
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.2 });
-
-                items.forEach(function (el) {
-                    observer.observe(el);
-                });
-            })();
-        </script>
+        <!-- .js-reveal IntersectionObserver handled by js/common.js -->
 
         <!--how we works-->
 
         <!-- Manufacturing Excellence Section -->
-        <style>
-            .interactive-mfg {
-                transition: all 0.4s ease;
-            }
-
-            .interactive-mfg:hover {
-                box-shadow: 0 15px 40px rgba(225, 29, 46, 0.3);
-            }
-
-            .interactive-mfg .image {
-                transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.4s ease;
-                filter: brightness(0.85);
-                width: 100%;
-                height: 100%;
-            }
-
-            .interactive-mfg:hover .image {
-                transform: scale(1.05);
-                filter: brightness(1.05);
-            }
-
-            .interactive-mfg h2,
-            .interactive-mfg p {
-                color: #ffffff !important;
-            }
-
-            .interactive-mfg .op-5 {
-                opacity: 0.9 !important;
-            }
-
-            .interactive-mfg .subtitle {
-                background: rgba(255, 255, 255, 0.2);
-                color: #ffffff;
-                border: 1px solid rgba(255, 255, 255, 0.4);
-            }
-
-            .interactive-mfg .btn-main {
-                background: #ffffff !important;
-                color: #E11D2E !important;
-            }
-
-            .interactive-mfg .btn-main:hover {
-                background: transparent !important;
-                color: #ffffff !important;
-                border-color: #ffffff !important;
-            }
-
-            .interactive-mfg .player {
-                background: rgba(255, 255, 255, 0.2) !important;
-                backdrop-filter: blur(5px);
-                border: 2px solid white !important;
-                transition: transform 0.3s ease, background 0.3s ease;
-            }
-
-            .interactive-mfg .player:hover {
-                background: #ffffff !important;
-                transform: scale(1.15);
-            }
-
-            .interactive-mfg .player:hover span {
-                border-left-color: #E11D2E !important;
-            }
-
-            .interactive-mfg .player {
-                animation: iconPulse 2s infinite;
-            }
-
-            @keyframes iconPulse {
-                0% {
-                    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
-                }
-
-                70% {
-                    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
-                }
-
-                100% {
-                    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-                }
-            }
-
-            /* Responsive Fixes for Video Section */
-            @media (max-width: 991px) {
-                .interactive-mfg .left-half {
-                    position: relative !important;
-                    min-height: 400px !important;
-                    width: 100% !important;
-                }
-                .interactive-mfg .offset-lg-6 {
-                    margin-left: 0 !important;
-                }
-                .interactive-mfg .ps-lg-5 {
-                    padding-left: 0 !important;
-                    text-align: center;
-                }
-                .interactive-mfg .spacer-double {
-                    display: none;
-                }
-            }
-            @media (max-width: 575px) {
-                .interactive-mfg .left-half {
-                    min-height: 250px !important;
-                }
-            }
-        </style>
 
         <section class="bg-color text-light no-top no-bottom overflow-hidden interactive-mfg py-0">
             <div class="container-fluid p-0">
@@ -2304,6 +1093,7 @@
                                 <div class="accordion-section-content" id="accordion-a1">
                                     <p>An industrial air circulator fan improves airflow in factories, warehouses, gyms,
                                         and large spaces by evenly distributing air and reducing heat buildup.</p>
+
                                 </div>
                                 <div class="accordion-section-title" data-tab="#accordion-a2">
                                     What is the difference between an industrial exhaust fan and an air circulator?
@@ -2364,7 +1154,7 @@
                     <div class="bloglist">
                         <div class="post-content">
                             <div class="post-image">
-                                <img alt="" src="images/news/1.webp" class="w-100">
+                                <img loading="lazy" alt="" src="images/news/1.webp" class="w-100">
                             </div>
                             <div class="post-text">
                                 <h4><a href="blog-single.html">Tips for Optimizing Your Air Conditioning
@@ -2380,7 +1170,7 @@
                     <div class="bloglist">
                         <div class="post-content">
                             <div class="post-image">
-                                <img alt="" src="images/background/1.jpg" class="w-100">
+                                <img loading="lazy" alt="" src="images/background/1.jpg" class="w-100">
                             </div>
                             <div class="post-text">
                                 <h4><a href="blog-single.html">Harnessing Technology for Energy-Efficient AC</a>
@@ -2396,7 +1186,7 @@
                     <div class="bloglist">
                         <div class="post-content">
                             <div class="post-image">
-                                <img alt="" src="images/news/3.webp" class="w-100">
+                                <img loading="lazy" alt="" src="images/news/3.webp" class="w-100">
                             </div>
                             <div class="post-text">
                                 <h4><a href="blog-single.html">The Impact of Air Conditioning on Indoor Air
@@ -2429,7 +1219,7 @@
                                     <h4 class="fs-36 mb-0 lh-1">20</h4>
                                     <span>Jun</span>
                                 </div>
-                                <img src="images/news/1.webp" class="w-100 hover-scale-1-1 transition-all" alt="">
+                                <img loading="lazy" src="images/news/1.webp" class="w-100 hover-scale-1-1 transition-all" alt="">
                             </div>
 
                             <div class="pt-30 relative">
@@ -2448,7 +1238,7 @@
                                     <h4 class="fs-36 mb-0 lh-1">20</h4>
                                     <span>Jun</span>
                                 </div>
-                                <img src="images/background/1.jpg" class="w-100 hover-scale-1-1 transition-all" alt="">
+                                <img loading="lazy" src="images/background/1.jpg" class="w-100 hover-scale-1-1 transition-all" alt="">
                             </div>
 
                             <div class="pt-30 relative">
@@ -2466,7 +1256,7 @@
                                     <h4 class="fs-36 mb-0 lh-1">20</h4>
                                     <span>Jun</span>
                                 </div>
-                                <img src="images/news/3.webp" class="w-100 hover-scale-1-1 transition-all" alt="">
+                                <img loading="lazy" src="images/news/3.webp" class="w-100 hover-scale-1-1 transition-all" alt="">
                             </div>
 
                             <div class="pt-30 relative">
@@ -2485,7 +1275,7 @@
                                     <h4 class="fs-36 mb-0 lh-1">20</h4>
                                     <span>Jun</span>
                                 </div>
-                                <img src="images/news/4.webp" class="w-100 hover-scale-1-1 transition-all" alt="">
+                                <img loading="lazy" src="images/news/4.webp" class="w-100 hover-scale-1-1 transition-all" alt="">
                             </div>
 
                             <div class="pt-30 relative">
@@ -2511,180 +1301,117 @@
                 </div>
 
                 <!-- Clients Logos Marquee -->
-                <style>
-                    .client-showcase {
-                        overflow: hidden;
-                        width: 100%;
-                        padding: 10px 0;
-                        position: relative;
-                    }
-
-                    .client-track {
-                        display: flex;
-                        gap: 40px;
-                        width: max-content;
-                        align-items: center;
-                        animation: marqueeClients 40s linear infinite;
-                    }
-
-                    .client-track:hover {
-                        animation-play-state: paused;
-                    }
-
-                    .client-logo-item img {
-                        height: 80px;
-                        /* Base height for desktop */
-                        width: auto;
-                        max-width: 200px;
-                        object-fit: contain;
-                    }
-
-                    @keyframes marqueeClients {
-                        0% {
-                            transform: translateX(0);
-                        }
-
-                        100% {
-                            transform: translateX(-50%);
-                        }
-                    }
-
-                    /* Responsive logo sizes */
-                    @media (max-width: 768px) {
-                        .client-track {
-                            gap: 30px;
-                        }
-
-                        .client-logo-item img {
-                            height: 60px;
-                            /* Slightly smaller on mobile */
-                            max-width: 150px;
-                        }
-                    }
-
-                    @media (max-width: 480px) {
-                        .client-track {
-                            gap: 20px;
-                        }
-
-                        .client-logo-item img {
-                            height: 50px;
-                            /* Smallest on very small phones */
-                            max-width: 120px;
-                        }
-                    }
-                </style>
 
                 <div class="client-showcase">
                     <div class="client-track">
                         <!-- SET 1 -->
-                        <div class="client-logo-item"><img src="images/clients/1.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/1.webp"
                                 class="hover-scale-1-2 transition-all" alt="Escorts" title="Escorts"></div>
-                        <div class="client-logo-item"><img src="images/clients/2.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/2.webp"
                                 class="hover-scale-1-2 transition-all" alt="Sanrio Puroland" title="Sanrio Puroland">
                         </div>
-                        <div class="client-logo-item"><img src="images/clients/3.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/3.webp"
                                 class="hover-scale-1-2 transition-all" alt="Honda" title="Honda"></div>
-                        <div class="client-logo-item"><img src="images/clients/4.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/4.webp"
                                 class="hover-scale-1-2 transition-all" alt="Indian Railways" title="Indian Railways">
                         </div>
-                        <div class="client-logo-item"><img src="images/clients/5.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/5.webp"
                                 class="hover-scale-1-2 transition-all" alt="JCB" title="JCB"></div>
-                        <div class="client-logo-item"><img src="images/clients/6.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/6.webp"
                                 class="hover-scale-1-2 transition-all" alt="Universal Studios Singapore"
                                 title="Universal Studios Singapore"></div>
-                        <div class="client-logo-item"><img src="images/clients/7.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/7.webp"
                                 class="hover-scale-1-2 transition-all" alt="Bata" title="Bata"></div>
-                        <div class="client-logo-item"><img src="images/clients/8.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/8.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 8"></div>
-                        <div class="client-logo-item"><img src="images/clients/9.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/9.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 9"></div>
-                        <div class="client-logo-item"><img src="images/clients/10.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/10.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 10"></div>
-                        <div class="client-logo-item"><img src="images/clients/11.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/11.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 11"></div>
-                        <div class="client-logo-item"><img src="images/clients/12.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/12.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 12"></div>
-                        <div class="client-logo-item"><img src="images/clients/13.avif"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/13.avif"
                                 class="hover-scale-1-2 transition-all" alt="Client 13"></div>
-                        <div class="client-logo-item"><img src="images/clients/14.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/14.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 14"></div>
-                        <div class="client-logo-item"><img src="images/clients/15.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/15.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 15"></div>
-                        <div class="client-logo-item"><img src="images/clients/16.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/16.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 16"></div>
-                        <div class="client-logo-item"><img src="images/clients/17.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/17.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 17"></div>
-                        <div class="client-logo-item"><img src="images/clients/18.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/18.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 18"></div>
-                        <div class="client-logo-item"><img src="images/clients/19.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/19.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 19"></div>
-                        <div class="client-logo-item"><img src="images/clients/20.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/20.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 20"></div>
-                        <div class="client-logo-item"><img src="images/clients/21.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/21.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 21"></div>
-                        <div class="client-logo-item"><img src="images/clients/22.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/22.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 22"></div>
-                        <div class="client-logo-item"><img src="images/clients/23.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/23.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 23"></div>
-                        <div class="client-logo-item"><img src="images/clients/24.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/24.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 24"></div>
-                        <div class="client-logo-item"><img src="images/clients/25.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/25.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 25"></div>
 
                         <!-- SET 2 (Duplicate for infinite seamless loop) -->
-                        <div class="client-logo-item"><img src="images/clients/1.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/1.webp"
                                 class="hover-scale-1-2 transition-all" alt="Escorts" title="Escorts"></div>
-                        <div class="client-logo-item"><img src="images/clients/2.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/2.webp"
                                 class="hover-scale-1-2 transition-all" alt="Sanrio Puroland" title="Sanrio Puroland">
                         </div>
-                        <div class="client-logo-item"><img src="images/clients/3.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/3.webp"
                                 class="hover-scale-1-2 transition-all" alt="Honda" title="Honda"></div>
-                        <div class="client-logo-item"><img src="images/clients/4.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/4.webp"
                                 class="hover-scale-1-2 transition-all" alt="Indian Railways" title="Indian Railways">
                         </div>
-                        <div class="client-logo-item"><img src="images/clients/5.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/5.webp"
                                 class="hover-scale-1-2 transition-all" alt="JCB" title="JCB"></div>
-                        <div class="client-logo-item"><img src="images/clients/6.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/6.webp"
                                 class="hover-scale-1-2 transition-all" alt="Universal Studios Singapore"
                                 title="Universal Studios Singapore"></div>
-                        <div class="client-logo-item"><img src="images/clients/7.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/7.webp"
                                 class="hover-scale-1-2 transition-all" alt="Bata" title="Bata"></div>
-                        <div class="client-logo-item"><img src="images/clients/8.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/8.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 8"></div>
-                        <div class="client-logo-item"><img src="images/clients/9.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/9.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 9"></div>
-                        <div class="client-logo-item"><img src="images/clients/10.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/10.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 10"></div>
-                        <div class="client-logo-item"><img src="images/clients/11.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/11.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 11"></div>
-                        <div class="client-logo-item"><img src="images/clients/12.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/12.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 12"></div>
-                        <div class="client-logo-item"><img src="images/clients/13.avif"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/13.avif"
                                 class="hover-scale-1-2 transition-all" alt="Client 13"></div>
-                        <div class="client-logo-item"><img src="images/clients/14.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/14.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 14"></div>
-                        <div class="client-logo-item"><img src="images/clients/15.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/15.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 15"></div>
-                        <div class="client-logo-item"><img src="images/clients/16.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/16.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 16"></div>
-                        <div class="client-logo-item"><img src="images/clients/17.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/17.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 17"></div>
-                        <div class="client-logo-item"><img src="images/clients/18.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/18.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 18"></div>
-                        <div class="client-logo-item"><img src="images/clients/19.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/19.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 19"></div>
-                        <div class="client-logo-item"><img src="images/clients/20.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/20.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 20"></div>
-                        <div class="client-logo-item"><img src="images/clients/21.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/21.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 21"></div>
-                        <div class="client-logo-item"><img src="images/clients/22.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/22.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 22"></div>
-                        <div class="client-logo-item"><img src="images/clients/23.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/23.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 23"></div>
-                        <div class="client-logo-item"><img src="images/clients/24.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/24.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 24"></div>
-                        <div class="client-logo-item"><img src="images/clients/25.webp"
+                        <div class="client-logo-item"><img loading="lazy" src="images/clients/25.webp"
                                 class="hover-scale-1-2 transition-all" alt="Client 25"></div>
                     </div>
                 </div>
@@ -2705,11 +1432,15 @@
                         <div class="bloglist">
                             <div class="post-content">
                                 <div class="post-image">
-                                    <img alt="Industrial Fan Selection Guide" src="images/background/1.jpg" class="w-100">
+                                    <img loading="lazy" alt="Industrial Fan Selection Guide"
+                                        src="images/background/1.jpg" class="w-100">
                                 </div>
                                 <div class="post-text">
-                                    <h4 class="mb-3"><a href="blog.html">How to Choose the Right Industrial Fan for Your Factory</a></h4>
-                                    <p class="mb-4">In large industrial environments such as factories and warehouses, maintaining proper airflow is essential for productivity and safety...</p>
+
+                                    <h4 class="mb-3"><a href="blog.html" class="text-white">How to Choose the Right
+                                            Industrial Fan for Your Factory</a></h4>
+                                    <p class="mb-4">In large industrial environments such as factories and warehouses,
+                                        maintaining proper airflow is essential for productivity and safety...</p>
                                     <a href="blog.html" class="btn-main btn-sm">Read More</a>
                                 </div>
                             </div>
@@ -2734,13 +1465,13 @@
                         <p class="mb-0 op-7">Contact our experts today for a customized cooling solution.</p>
                     </div>
                     <div class="col-md-4 col-sm-12 text-lg-end text-sm-start mt-sm-30">
-                        <a href="contact.html" class="btn-main">Get a Free Quote</a>
+                        <a href="contact.html" class="btn-main bg-black text-white">Get Quote</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        
+
 
         <footer class="section-dark text-light pt-60">
             <div class="container">
@@ -2757,9 +1488,14 @@
 
                         <!-- Social Icons -->
                         <div class="social-icons mt-3">
-                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=61580332443472" target="_blank"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.youtube.com/@Action-aire" target="_blank"><i
+                                    class="fa-brands fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/action_aire_fans/" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/action-aire/" target="_blank"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
                         </div>
 
 
@@ -2822,6 +1558,9 @@
                         <div class="col-md-12 text-center">
                             © Copyright 2025 by Action Aire.
                         </div>
+                        <div class="col-md-12 text-center">
+                            Developed by <a href="https://imagineadda.com/">Imagine Adda</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2853,72 +1592,19 @@
 
         <!-- Javascript Files
     ================================================== -->
-        <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                // Initialize Swiper with Autoplay and Navigation
-                var swiper = new Swiper('.swiper-container-full', {
-                    loop: true,
-                    autoplay: {
-                        delay: 5000,
-                        disableOnInteraction: false,
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                    effect: 'fade',
-                    fadeEffect: {
-                        crossFade: true
-                    },
-                });
-            });
-
-            const lenis = new Lenis({
-                lerp: 0.1,
-                wheelMultiplier: 0.7,
-                gestureOrientation: "vertical",
-                normalizeWheel: false,
-                smoothTouch: false,
-            })
-            lenis.on('scroll', (e) => {
-                console.log(e)
-            })
-
-            function raf(time) {
-                lenis.raf(time)
-                requestAnimationFrame(raf)
-            }
-            requestAnimationFrame(raf)
-        </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const extraWrap = document.getElementById('extra-wrap');
-                const btnExtra = document.getElementById('btn-extra');
-                const btnClose = document.getElementById('btn-close');
-
-                // Close when clicking the close button
-                btnClose.addEventListener('click', function () {
-                    extraWrap.classList.remove('open');
-                });
-
-                // Close when clicking outside the content area
-                extraWrap.addEventListener('click', function (e) {
-                    if (e.target === extraWrap) {
-                        extraWrap.classList.remove('open');
-                    }
-                });
-            });
-        </script>
+        <!-- Critical scripts: load synchronously so preloader, WOW.js & Swiper init immediately -->
         <script src="js/plugins.js"></script>
         <script src="js/designesia.js"></script>
         <script src="js/swiper.js"></script>
         <script src="js/custom-marquee.js"></script>
         <script src="js/custom-swiper-1.js"></script>
+        <script src="js/home-init.js"></script>
+        <!-- Non-critical: defer safely -->
+        <script src="js/header-nav.js" defer></script>
+        <script src="js/common.js" defer></script>
+        <script src="js/enquiry-form.js" defer></script>
+        <script src="js/color-rotator.js" defer></script>
+        <script src="js/fan-showcase.js" defer></script>
 </body>
 
 </html>

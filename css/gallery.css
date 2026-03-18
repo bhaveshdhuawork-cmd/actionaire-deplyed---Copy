@@ -1,0 +1,42 @@
+/**
+ * gallery.css
+ * Styles for the Gallery page grid cards and lightbox.
+ */
+
+.gallery-card {
+    position: relative;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.gallery-card img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Zoom icon overlay on hover */
+.gallery-card::after {
+    content: "\f00e";
+    font-family: FontAwesome, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.gallery-card:hover::after {
+    opacity: 1;
+}

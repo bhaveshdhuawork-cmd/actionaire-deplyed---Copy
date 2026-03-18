@@ -1,0 +1,172 @@
+/* UI Elements - Actionaire */
+
+/* Team Member Hover Effect */
+.team-card {
+    padding: 10px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.team-card:hover {
+    border-color: #E11D2E;
+    box-shadow: 0 10px 30px rgba(225, 29, 46, 0.1);
+    transform: translateY(-5px);
+    background-color: #fff;
+}
+
+/* Client Showcase Marquee */
+.client-showcase {
+    overflow: hidden;
+    width: 100%;
+    padding: 10px 0;
+    position: relative;
+}
+
+.client-track {
+    display: flex;
+    gap: 40px;
+    width: max-content;
+    align-items: center;
+    animation: marqueeClients 40s linear infinite;
+}
+
+.client-track:hover {
+    animation-play-state: paused;
+}
+
+.client-logo-item img {
+    height: 80px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+}
+
+@keyframes marqueeClients {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Responsive logo sizes */
+@media (max-width: 768px) {
+    .client-track {
+        gap: 30px;
+    }
+    .client-logo-item img {
+        height: 60px;
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .client-track {
+        gap: 20px;
+    }
+    .client-logo-item img {
+        height: 50px;
+        max-width: 120px;
+    }
+}
+
+/* Product Detail UI */
+.size-btn {
+    border: 2px solid #eee;
+    background: #fff;
+    color: #333;
+    padding: 10px 25px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.size-btn:hover,
+.size-btn.active {
+    background: #E11D2E;
+    color: #fff;
+    border-color: #E11D2E;
+}
+
+.form-control[readonly] {
+    background-color: #f8f9fa;
+    opacity: 1;
+    border: 1px solid #e9ecef;
+}
+
+/* Gallery Styles */
+.product-gallery-main {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+.product-gallery-thumbs {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.product-thumb {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+.product-thumb:hover,
+.product-thumb.active {
+    border-color: #E11D2E;
+}
+
+.product-main-img {
+    transition: transform 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Certifications Marquee */
+.cert-track {
+    display: flex;
+    gap: 25px;
+    width: max-content;
+    align-items: center;
+    animation: marqueeClients 40s linear infinite; /* Reusing existing animation */
+}
+
+.cert-track:hover {
+    animation-play-state: paused;
+}
+
+.cert-item {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.cert-item a {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.cert-item a:hover {
+    transform: translateY(-5px);
+    border-color: #E11D2E !important;
+    background-color: #fff !important;
+    box-shadow: 0 5px 15px rgba(225, 29, 46, 0.08);
+}
